@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontaktio — Strony WWW i AI Asystenci dla firm</title>
-  <meta name="description" content="Kontaktio — projektujemy nowoczesne strony internetowe i wdrażamy AI asystentów dla firm. Wdrożenie w 48h od 499 zł / mies. Mała ekipa z Łodzi, działamy w całej Polsce." />
-  <meta name="theme-color" content="#f9f8f6" />
+  <title>Kontaktio — Strona, która rozmawia z Twoimi klientami</title>
+  <meta name="description" content="Kontaktio — projektujemy strony internetowe i wdrażamy AI asystentów, którzy odpowiadają tonem Twojej firmy. Wdrożenie w 48 godzin, od 499 zł / mies. Mała ekipa z Łódzkiego, działamy w całej Polsce." />
+  <meta name="theme-color" content="#0a0a0a" />
   <meta name="color-scheme" content="light" />
   <link rel="canonical" href="https://kontaktio.pl/" />
 
@@ -18,8 +18,8 @@
   <link rel="manifest" href="manifest.json" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Kontaktio — Strony WWW i AI Asystenci" />
-  <meta property="og:description" content="Strony internetowe i AI asystenci dla firm. Wdrożenie w 48h od 499 zł / mies." />
+  <meta property="og:title" content="Kontaktio — Strona, która rozmawia z Twoimi klientami" />
+  <meta property="og:description" content="Strony internetowe i AI asystenci dla firm. Wdrożenie w 48 godzin, od 499 zł / mies." />
   <meta property="og:url" content="https://kontaktio.pl/" />
 
   <link rel="stylesheet" href="styles.css" />
@@ -42,7 +42,7 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#services">Usługi</a></li>
+        <li><a href="#asystent">Asystent</a></li>
         <li><a href="branze.html">Branże</a></li>
         <li><a href="realizacje.html">Realizacje</a></li>
         <li><a href="cennik.html">Cennik</a></li>
@@ -61,359 +61,179 @@
   </div>
 </nav>
 
-<!-- ─── HERO ──────────────────────────────────── -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid-bg"></div>
+<!-- ─── HERO (centered, dark accent, chat preview below) ────────────── -->
+<section id="hero-pro">
+  <div class="hero-pro-bg"></div>
   <div class="container">
-    <div class="hero-content">
+    <div class="hero-pro-inner">
 
-      <div class="hero-badge">
+      <div class="hero-badge reveal visible">
         <span class="badge-dot"></span>
-        <span class="t-label">Przyjmujemy nowe projekty · 2026</span>
+        <span class="t-label">Nowy rok, nowi klienci · 2026</span>
       </div>
 
-      <h1 class="t-display hero-title">
-        Strony, które<br/>
-        <span class="accent-word">sprzedają.</span><br/>
-        AI, które domyka kontakt.
+      <h1 class="t-display hero-pro-title">
+        Strona, która<br/>
+        <span class="accent-word">odpowiada</span>
+        <span class="hero-pro-sub-line">— zanim zdążysz odebrać telefon.</span>
       </h1>
 
-      <p class="t-body hero-body">
-        Projektujemy nowoczesne witryny i wdrażamy AI asystentów dopasowanych do Twojej firmy —
-        rozwiązania, które realnie pracują na Twój biznes. Wdrożenie w 48 godzin, od 499 zł / mies.
+      <p class="t-body hero-pro-lead">
+        Projektujemy nowoczesne witryny i wdrażamy AI asystentów, którzy mówią tonem Twojej firmy,
+        opierają się o Twoje dane i prowadzą rozmowę do konkretu — oferty, terminu, kontaktu.
       </p>
 
-      <div class="hero-actions">
+      <div class="hero-pro-actions">
         <a href="kontakt.html" class="btn btn-primary">
           Bezpłatna wycena
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3 8h10M9 4l4 4-4 4"/>
           </svg>
         </a>
-        <a href="realizacje.html" class="btn btn-ghost">Zobacz realizacje</a>
+        <a href="#asystent" class="btn btn-ghost">Zobacz, jak rozmawia</a>
+      </div>
+
+      <div class="hero-pro-meta">
+        <span><strong>48&nbsp;h</strong> średnie wdrożenie</span>
+        <span class="dot-sep">·</span>
+        <span>od <strong>499&nbsp;zł</strong> / mies.</span>
+        <span class="dot-sep">·</span>
+        <span>bez opłaty wstępnej</span>
       </div>
 
     </div>
   </div>
-  <div class="hero-scroll">
-    <span class="t-small">scroll</span>
-    <div class="scroll-line"></div>
-  </div>
 </section>
 
-<!-- ─── MARQUEE STRIP ─────────────────────────── -->
-<div class="marquee-strip">
-  <div class="marquee-track">
-    <span class="marquee-item">Strony WWW</span>
-    <span class="marquee-item">AI Asystenci</span>
-    <span class="marquee-item">Chatboty</span>
-    <span class="marquee-item">UI / UX</span>
-    <span class="marquee-item">Landing Pages</span>
-    <span class="marquee-item">E-commerce</span>
-    <span class="marquee-item">Integracje</span>
-    <span class="marquee-item">Wdrożenie 48h</span>
-    <!-- duplicate for seamless loop -->
-    <span class="marquee-item">Strony WWW</span>
-    <span class="marquee-item">AI Asystenci</span>
-    <span class="marquee-item">Chatboty</span>
-    <span class="marquee-item">UI / UX</span>
-    <span class="marquee-item">Landing Pages</span>
-    <span class="marquee-item">E-commerce</span>
-    <span class="marquee-item">Integracje</span>
-    <span class="marquee-item">Wdrożenie 48h</span>
+<!-- ─── INDUSTRY STRIP (zastępuje marquee) ─────────── -->
+<div class="industry-strip">
+  <div class="container">
+    <p class="t-small industry-strip-label">Pracujemy z firmami z branż:</p>
+    <div class="industry-strip-row">
+      <span>Hotelarstwo</span>
+      <span>Beauty &amp; SPA</span>
+      <span>Gastronomia</span>
+      <span>Motoryzacja</span>
+      <span>E&#8209;commerce</span>
+      <span>Usługi medyczne</span>
+      <span>Edukacja</span>
+      <span>Wnętrza</span>
+    </div>
   </div>
 </div>
 
-<!-- ─── SERVICES ─────────────────────────────── -->
-<section id="services">
+<!-- ─── MANIFESTO (4 duże tile’e — Apple highlights style) ─────── -->
+<section id="manifesto">
   <div class="container">
 
     <div class="section-header reveal">
-      <p class="t-small">Co robimy</p>
-      <h2 class="t-h1">Strony i AI asystenci<br/>w jednym miejscu</h2>
-      <p class="t-body">Od pomysłu po wdrożenie — kompleksowe rozwiązania dla małych i średnich firm.</p>
+      <p class="t-small">Co nas wyróżnia</p>
+      <h2 class="t-h1">Cztery zasady,<br/>na których zbudowaliśmy Kontaktio.</h2>
     </div>
 
-    <div class="grid-3">
+    <div class="manifesto-grid">
 
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <rect x="3" y="3" width="18" height="18" rx="3"/>
-            <path d="M3 9h18M9 21V9"/>
-          </svg>
-        </div>
-        <h3 class="t-h3">Strony WWW</h3>
-        <p class="t-body">Nowoczesne witryny dopasowane do Twojej firmy — szybkie, czytelne i konwertujące.</p>
-        <span class="service-tag">wdrożenie w 48h</span>
+      <div class="manifesto-card manifesto-card--dark reveal">
+        <span class="manifesto-num">01</span>
+        <h3 class="manifesto-headline">Wdrożenie liczone w&nbsp;godzinach, nie w&nbsp;miesiącach.</h3>
+        <p class="manifesto-body">Standardowo 48 godzin od akceptacji wyceny. Bez sprintów planistycznych i pięciu rund poprawek.</p>
       </div>
 
-      <div class="service-card featured reveal reveal-delay-2">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <circle cx="12" cy="12" r="3"/>
-            <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
-          </svg>
-        </div>
-        <h3 class="t-h3">AI Asystenci</h3>
-        <p class="t-body">Inteligentny chatbot, który mówi tonem Twojej firmy, opiera się o Twoje dane i prowadzi rozmowę do konkretu.</p>
-        <span class="service-tag">✦ Flagship</span>
+      <div class="manifesto-card reveal reveal-delay-1">
+        <span class="manifesto-num">02</span>
+        <h3 class="manifesto-headline">Asystent mówi <em>Twoim</em> tonem.</h3>
+        <p class="manifesto-body">Konfigurujemy go ręcznie pod Twoją branżę i sposób rozmowy z klientem. Brzmi jak Ty — nie jak czat z banku.</p>
       </div>
 
-      <div class="service-card reveal reveal-delay-3">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M12 20V10M6 20V4M18 20v-4"/>
-          </svg>
-        </div>
-        <h3 class="t-h3">Optymalizacja & SEO</h3>
-        <p class="t-body">Konfiguracja Analytics, podstawowe SEO techniczne, czyste meta i performance.</p>
-        <span class="service-tag">w pakiecie</span>
+      <div class="manifesto-card reveal reveal-delay-2">
+        <span class="manifesto-num">03</span>
+        <h3 class="manifesto-headline">Nie zmyśla. Nie obiecuje. Nie improwizuje.</h3>
+        <p class="manifesto-body">Trzyma się Twoich danych. Gdy czegoś nie wie — uczciwie kieruje do kontaktu z człowiekiem.</p>
       </div>
 
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M6 3h12l4 6-10 13L2 9z"/>
-          </svg>
-        </div>
-        <h3 class="t-h3">Identyfikacja</h3>
-        <p class="t-body">Logo, paleta i prosty system wizualny — żeby wszystko trzymało jeden styl.</p>
-        <span class="service-tag">design system</span>
-      </div>
-
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <rect x="1" y="5" width="22" height="14" rx="3"/>
-            <path d="M1 10h22"/>
-          </svg>
-        </div>
-        <h3 class="t-h3">E-commerce</h3>
-        <p class="t-body">Sklepy z asystentem AI w roli sprzedawcy — pomaga wybrać, doradza, konwertuje.</p>
-        <span class="service-tag">na zamówienie</span>
-      </div>
-
-      <div class="service-card reveal reveal-delay-3">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <polyline points="16 18 22 12 16 6"/>
-            <polyline points="8 6 2 12 8 18"/>
-          </svg>
-        </div>
-        <h3 class="t-h3">Integracje</h3>
-        <p class="t-body">CRM, kalendarz, formularze, e-mail. Łączymy asystenta z Twoimi narzędziami.</p>
-        <span class="service-tag">na życzenie</span>
+      <div class="manifesto-card reveal reveal-delay-3">
+        <span class="manifesto-num">04</span>
+        <h3 class="manifesto-headline">Płacisz miesięcznie. Bez gwiazdek przy cenie.</h3>
+        <p class="manifesto-body">Jedna kwota, wszystko w środku. Bez opłaty wstępnej, bez nagłych „dodatków" w fakturze.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ─── STATS ─────────────────────────────────── -->
-<section id="stats">
-  <div class="container">
-    <div class="stats-grid">
-
-      <div class="stat-cell reveal">
-        <div class="stat-number" data-count="48" data-suffix="h">48h</div>
-        <div class="stat-label">Standardowe wdrożenie</div>
-      </div>
-
-      <div class="stat-cell reveal reveal-delay-1">
-        <div class="stat-number" data-count="499" data-suffix=" zł">od 499 zł</div>
-        <div class="stat-label">Najniższy plan miesięczny</div>
-      </div>
-
-      <div class="stat-cell reveal reveal-delay-2">
-        <div class="stat-number" data-count="2" data-suffix="">2</div>
-        <div class="stat-label">Osoby — bez pośredników</div>
-      </div>
-
-      <div class="stat-cell reveal reveal-delay-3">
-        <div class="stat-number" data-count="3" data-suffix="">3</div>
-        <div class="stat-label">Miesięcy minimalnego kontraktu</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ─── PROCESS ───────────────────────────────── -->
-<section id="process">
+<!-- ─── ASYSTENT — SHOWCASE Z TELEFONEM ──────────────────────── -->
+<section id="asystent">
   <div class="container">
 
-    <div class="section-header reveal">
-      <p class="t-small">Jak pracujemy</p>
-      <h2 class="t-h1">Prosty proces,<br/>konkretne efekty</h2>
-    </div>
+    <div class="showcase-grid">
 
-    <div class="process-grid">
-
-      <div class="process-step reveal">
-        <div class="step-num">01</div>
-        <div class="step-icon-row">
-          <div class="step-icon">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
-              <circle cx="10" cy="10" r="8"/>
-              <path d="M10 6v4l3 3"/>
-            </svg>
-          </div>
-          <h3 class="t-h3">Rozmowa</h3>
-        </div>
-        <p class="t-body">Krótki wywiad — branża, najczęstsze pytania klientów, czego potrzebujesz. Bez prezentacji na 40 slajdów.</p>
-      </div>
-
-      <div class="process-step reveal reveal-delay-1">
-        <div class="step-num">02</div>
-        <div class="step-icon-row">
-          <div class="step-icon">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="2" y="4" width="16" height="12" rx="2"/>
-              <path d="M6 8h8M6 12h5"/>
-            </svg>
-          </div>
-          <h3 class="t-h3">Wycena</h3>
-        </div>
-        <p class="t-body">Konkretna propozycja w 24h — co dostajesz, ile to kosztuje, w jakim czasie. Bez ukrytych pozycji.</p>
-      </div>
-
-      <div class="process-step reveal reveal-delay-2">
-        <div class="step-num">03</div>
-        <div class="step-icon-row">
-          <div class="step-icon">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
-              <polyline points="4 10 8 14 16 6"/>
-            </svg>
-          </div>
-          <h3 class="t-h3">Wdrożenie</h3>
-        </div>
-        <p class="t-body">Strona i asystent gotowe w 48h od akceptacji wyceny. Konfiguracja pod Twoją firmę i ton.</p>
-      </div>
-
-      <div class="process-step reveal reveal-delay-3">
-        <div class="step-num">04</div>
-        <div class="step-icon-row">
-          <div class="step-icon">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M10 2v4M10 14v4M2 10h4M14 10h4"/>
-              <circle cx="10" cy="10" r="3"/>
-            </svg>
-          </div>
-          <h3 class="t-h3">Wsparcie</h3>
-        </div>
-        <p class="t-body">Reagujemy bezpośrednio — bez ticketów i kolejek. Dorastamy razem z Twoim biznesem.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ─── WORK ──────────────────────────────────── -->
-<section id="work">
-  <div class="container">
-
-    <div class="section-header reveal">
-      <p class="t-small">Wybrane realizacje</p>
-      <h2 class="t-h1">Co już zbudowaliśmy</h2>
-      <p class="t-body">Każdy projekt to inna branża — i inny zestaw pytań, na które asystent odpowiada od pierwszego dnia.</p>
-    </div>
-
-    <div class="work-list">
-
-      <a href="realizacje.html" class="work-item reveal">
-        <div class="work-info">
-          <div class="work-thumb"></div>
-          <span class="work-title">Hotel — strona + asystent rezerwacji</span>
-        </div>
-        <span class="work-meta">Hospitality · AI</span>
-        <span class="work-year">2026</span>
-        <div class="work-arrow">
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 8h10M9 4l4 4-4 4"/>
-          </svg>
-        </div>
-      </a>
-
-      <a href="realizacje.html" class="work-item reveal reveal-delay-1">
-        <div class="work-info">
-          <div class="work-thumb work-thumb--gray"></div>
-          <span class="work-title">Salon beauty — cennik & terminy</span>
-        </div>
-        <span class="work-meta">Beauty · AI</span>
-        <span class="work-year">2026</span>
-        <div class="work-arrow">
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 8h10M9 4l4 4-4 4"/>
-          </svg>
-        </div>
-      </a>
-
-      <a href="realizacje.html" class="work-item reveal reveal-delay-2">
-        <div class="work-info">
-          <div class="work-thumb work-thumb--sand"></div>
-          <span class="work-title">Mechanik — wycena & dojazd</span>
-        </div>
-        <span class="work-meta">Auto · AI</span>
-        <span class="work-year">2026</span>
-        <div class="work-arrow">
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 8h10M9 4l4 4-4 4"/>
-          </svg>
-        </div>
-      </a>
-
-      <a href="realizacje.html" class="work-item reveal reveal-delay-3">
-        <div class="work-info">
-          <div class="work-thumb work-thumb--beige"></div>
-          <span class="work-title">Catering — oferta i zamówienia</span>
-        </div>
-        <span class="work-meta">Food · AI</span>
-        <span class="work-year">2026</span>
-        <div class="work-arrow">
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 8h10M9 4l4 4-4 4"/>
-          </svg>
-        </div>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ─── AI FEATURE ────────────────────────────── -->
-<section id="ai-feature">
-  <div class="container">
-    <div class="ai-banner reveal">
-
-      <div class="ai-text">
+      <div class="showcase-text reveal">
         <p class="t-small">AI Asystent</p>
-        <h2 class="t-h1">Asystent, który<br/>brzmi jak Ty</h2>
-        <p class="t-body">Mówi tonem Twojej firmy, opiera się o Twoje dane i prowadzi rozmowę do konkretu — oferta, kontakt, wycena, termin. Klient pyta, asystent odpowiada — natychmiast.</p>
-        <a href="cennik.html" class="btn btn-light">
-          Zobacz cennik
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 8h10M9 4l4 4-4 4"/>
-          </svg>
+        <h2 class="t-h1">Pierwszy kontakt<br/>z Twoją firmą — o&nbsp;każdej porze.</h2>
+        <p class="t-body">
+          Asystent odpowiada na pytania klientów wtedy, kiedy oni je zadają — wieczorem, w niedzielę, w środku Twojego spotkania.
+          Doradza, podaje cenę, proponuje termin, zostawia kontakt. Resztę przejmujesz Ty.
+        </p>
+
+        <ul class="showcase-list">
+          <li>
+            <span class="showcase-check">
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>
+            </span>
+            Rozumie kontekst rozmowy, nie tylko pojedyncze pytanie
+          </li>
+          <li>
+            <span class="showcase-check">
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>
+            </span>
+            Działa w Twoich godzinach pracy <em>i</em> poza nimi
+          </li>
+          <li>
+            <span class="showcase-check">
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>
+            </span>
+            Wygląda jak część strony, nie obcy widget z internetu
+          </li>
+          <li>
+            <span class="showcase-check">
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>
+            </span>
+            Codzienny raport — co pytano, kogo skierować do kontaktu
+          </li>
+        </ul>
+
+        <a href="cennik.html" class="btn btn-primary">
+          Zobacz plany
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
 
-      <div class="ai-visual">
-        <div class="ai-chat-msg">
-          <div class="msg-avatar user"></div>
-          <div class="msg-bubble user">Ile kosztuje wdrożenie asystenta?</div>
-        </div>
-        <div class="ai-chat-msg">
-          <div class="msg-avatar ai"></div>
-          <div class="msg-bubble">
-            Najtańszy plan startuje od 499 zł / mies. — w cenie pełna konfiguracja pod Twoją firmę i wsparcie. Chcesz porównanie planów?
-            <span class="msg-cursor"></span>
+      <div class="phone-frame reveal reveal-delay-1" aria-hidden="true">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="phone-status">
+            <span>23:14</span>
+            <span class="phone-status-dots">●●●●</span>
           </div>
-        </div>
-        <div class="ai-chat-msg">
-          <div class="msg-avatar user"></div>
-          <div class="msg-bubble user">Tak, poproszę wycenę dla mojej branży</div>
+          <div class="phone-chat-head">
+            <div class="phone-avatar"></div>
+            <div>
+              <div class="phone-chat-name">Kontaktio · Asystent</div>
+              <div class="phone-chat-status"><span class="online-dot"></span>online</div>
+            </div>
+          </div>
+          <div class="phone-chat-body">
+            <div class="phone-msg user">Dobry wieczór, czy macie wolny stolik na sobotę o 19:30 dla 4 osób?</div>
+            <div class="phone-msg bot">Dobry wieczór 👋 Tak, mamy. W sobotę o 19:30 wolny jest stolik przy oknie w sali głównej. Chce Pan, żebym wstępnie go zarezerwował?</div>
+            <div class="phone-msg user">Tak, poproszę. Mała alergia — mąż nie je orzechów.</div>
+            <div class="phone-msg bot">Notuję. Przekażę kuchni, żeby oznaczyć dania. Czy zostawi mi Pan numer telefonu — wyślemy potwierdzenie SMS-em.<span class="msg-cursor"></span></div>
+          </div>
+          <div class="phone-input">
+            <span>Napisz wiadomość…</span>
+            <span class="phone-send-icon">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </span>
+          </div>
         </div>
       </div>
 
@@ -421,55 +241,254 @@
   </div>
 </section>
 
-<!-- ─── PRICING ───────────────────────────────── -->
+<!-- ─── CAPABILITIES — co potrafi (grid 2x3, ikona + opis) ────── -->
+<section id="capabilities">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <p class="t-small">Co potrafi</p>
+      <h2 class="t-h1">Sześć rzeczy, które<br/>asystent robi za Ciebie.</h2>
+      <p class="t-body">Konkretne zadania, nie ogólniki. Od pierwszej rozmowy, od pierwszego dnia.</p>
+    </div>
+
+    <div class="capabilities-grid">
+
+      <article class="capability">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M3 8h18M3 12h18M3 16h12"/>
+          </svg>
+        </div>
+        <h3>Odpowiada na pytania o ofertę</h3>
+        <p>Cennik, dostępność, zakres usług — z Twoich danych, w Twoim stylu.</p>
+      </article>
+
+      <article class="capability">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <rect x="3" y="5" width="18" height="15" rx="2"/>
+            <path d="M3 10h18M8 3v4M16 3v4"/>
+          </svg>
+        </div>
+        <h3>Proponuje wolne terminy</h3>
+        <p>Podpowiada konkretne sloty, prowadzi rozmowę do rezerwacji albo zostawienia kontaktu.</p>
+      </article>
+
+      <article class="capability">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.4 8.4 0 0 1-7.6-4.6L3 21l1.7-1.4A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/>
+          </svg>
+        </div>
+        <h3>Kwalifikuje zapytania</h3>
+        <p>Oddziela ciekawskich od realnych klientów. Do skrzynki trafia gotowy lead, nie szum.</p>
+      </article>
+
+      <article class="capability">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M2 12h20M12 2a14 14 0 0 1 0 20M12 2a14 14 0 0 0 0 20"/>
+          </svg>
+        </div>
+        <h3>Mówi w językach klientów</h3>
+        <p>Rozumie polski, angielski, niemiecki, ukraiński — w tym samym oknie czatu.</p>
+      </article>
+
+      <article class="capability">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M12 2v6M12 22v-4M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19"/>
+            <circle cx="12" cy="14" r="4"/>
+          </svg>
+        </div>
+        <h3>Doradza przy wyborze</h3>
+        <p>Pomaga porównać warianty, dopytuje o potrzeby, podsuwa najlepsze dopasowanie.</p>
+      </article>
+
+      <article class="capability">
+        <div class="capability-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <rect x="3" y="4" width="18" height="16" rx="2"/>
+            <path d="M3 9h18M8 14h4"/>
+          </svg>
+        </div>
+        <h3>Zostawia raport — codziennie</h3>
+        <p>Streszczenie rozmów, najczęstsze pytania i lista kontaktów do oddzwonienia.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW IT WORKS — poziomy timeline ──────────────────────── -->
+<section id="how">
+  <div class="container">
+
+    <div class="section-header section-header--center reveal">
+      <p class="t-small">Jak pracujemy</p>
+      <h2 class="t-h1">Trzy kroki. Jeden weekend.</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-step reveal">
+        <div class="timeline-dot">1</div>
+        <h3>Rozmowa</h3>
+        <p>30&nbsp;minut, bez prezentacji na 40 slajdów. Pytamy o branżę, klientów i to, co najczęściej Cię od nich pyta.</p>
+        <span class="timeline-time">dzień&nbsp;1 · do&nbsp;30&nbsp;min</span>
+      </div>
+
+      <div class="timeline-step reveal reveal-delay-1">
+        <div class="timeline-dot">2</div>
+        <h3>Wycena i akceptacja</h3>
+        <p>Konkretna propozycja w 24&nbsp;godziny. Co dostajesz, ile to kosztuje, w jakim czasie.</p>
+        <span class="timeline-time">dzień&nbsp;1–2 · do&nbsp;24&nbsp;h</span>
+      </div>
+
+      <div class="timeline-step reveal reveal-delay-2">
+        <div class="timeline-dot">3</div>
+        <h3>Wdrożenie i&nbsp;start</h3>
+        <p>Strona i asystent gotowe w 48&nbsp;godzin od akceptacji. Konfiguracja pod Twoją firmę i ton rozmowy.</p>
+        <span class="timeline-time">dzień&nbsp;3–4 · 48&nbsp;h</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── COMPARE — Trzy drogi ─────────────────────────────────── -->
+<section id="compare">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <p class="t-small">Trzy drogi</p>
+      <h2 class="t-h1">Agencja, freelancer, czy&nbsp;Kontaktio?</h2>
+      <p class="t-body">Każdy wybór jest dobry — dla kogoś. Różnimy się tym, jak szybko i bezpośrednio docieramy do efektu.</p>
+    </div>
+
+    <div class="compare-grid">
+
+      <div class="compare-col reveal">
+        <div class="compare-head">
+          <p class="t-small">Klasyczna agencja</p>
+          <h3>Pełen proces, pełne tempo agencji.</h3>
+        </div>
+        <ul class="compare-list">
+          <li><span class="x">—</span> wdrożenie 2–6 miesięcy</li>
+          <li><span class="x">—</span> wysoka faktura na start</li>
+          <li><span class="x">—</span> opieka przez tickety</li>
+          <li><span class="ok">+</span> duże zespoły, dużo procesów</li>
+        </ul>
+      </div>
+
+      <div class="compare-col reveal reveal-delay-1">
+        <div class="compare-head">
+          <p class="t-small">Freelancer</p>
+          <h3>Tanio i kameralnie — ale zmienne tempo.</h3>
+        </div>
+        <ul class="compare-list">
+          <li><span class="x">—</span> niejasne terminy realizacji</li>
+          <li><span class="x">—</span> jedna głowa, jedno spojrzenie</li>
+          <li><span class="x">—</span> rzadko obejmuje AI</li>
+          <li><span class="ok">+</span> niski koszt jednorazowy</li>
+        </ul>
+      </div>
+
+      <div class="compare-col compare-col--featured reveal reveal-delay-2">
+        <div class="compare-badge">Polecane</div>
+        <div class="compare-head">
+          <p class="t-small">Kontaktio</p>
+          <h3>Mała ekipa, szybkie tempo, jeden bezpośredni kontakt.</h3>
+        </div>
+        <ul class="compare-list">
+          <li><span class="ok">+</span> wdrożenie w 48 godzin</li>
+          <li><span class="ok">+</span> miesięczna subskrypcja, bez opłaty wstępnej</li>
+          <li><span class="ok">+</span> strona <em>i</em> asystent — w jednym</li>
+          <li><span class="ok">+</span> piszesz do Bartka — odpowiada Bartek</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── STATS BAND — pozioma linia danych ─────────────────────── -->
+<section id="band">
+  <div class="container">
+    <div class="band">
+      <div class="band-cell reveal">
+        <div class="band-num"><span data-count="48" data-suffix="">48</span><sup>h</sup></div>
+        <div class="band-lbl">Średnie wdrożenie</div>
+      </div>
+      <div class="band-cell reveal reveal-delay-1">
+        <div class="band-num"><span>od</span> <span data-count="499" data-suffix="">499</span><sup>zł</sup></div>
+        <div class="band-lbl">Plan miesięczny</div>
+      </div>
+      <div class="band-cell reveal reveal-delay-2">
+        <div class="band-num"><span data-count="24" data-suffix="">24</span><sup>/&nbsp;7</sup></div>
+        <div class="band-lbl">Asystent na dyżurze</div>
+      </div>
+      <div class="band-cell reveal reveal-delay-3">
+        <div class="band-num"><span>0</span><sup>zł</sup></div>
+        <div class="band-lbl">Opłata wstępna</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FEATURED TESTIMONIAL ────────────────────────────────── -->
+<section id="voice">
+  <div class="container">
+    <figure class="quote-block reveal">
+      <span class="quote-mark">"</span>
+      <blockquote>
+        Telefon dzwoni dziś rzadziej, ale w skrzynce mam konkretne zapytania — z imieniem, godziną i tym, czego ktoś szuka.
+        Tego nie dało mi żadne wcześniejsze narzędzie.
+      </blockquote>
+      <figcaption>
+        <div class="quote-avatar"></div>
+        <div>
+          <div class="quote-name">Anna K.</div>
+          <div class="quote-role">Salon beauty · Łódź</div>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ─── PRICING ───────────────────────────────────────────────── -->
 <section id="pricing">
   <div class="container">
 
     <div class="section-header section-header--center reveal">
       <p class="t-small">Cennik</p>
-      <h2 class="t-h1">Proste, przejrzyste ceny</h2>
-      <p class="t-body">Bez ukrytych kosztów. Wiesz co płacisz i co dostajesz. Zawsze możesz zmienić plan.</p>
+      <h2 class="t-h1">Bez gwiazdek. Bez „od".</h2>
+      <p class="t-body">Trzy plany, jedna logika: płacisz miesięcznie, w każdej chwili możesz zmienić plan lub zrezygnować.</p>
     </div>
 
     <div class="pricing-grid">
 
-      <!-- Starter -->
       <div class="pricing-card reveal">
         <p class="t-small">Starter</p>
-        <h3 class="t-h3">AI asystent na stronę</h3>
+        <h3 class="t-h3">AI asystent na Twoją stronę</h3>
         <div class="price-row">
           <span class="price-amount">499</span>
           <span class="price-period">zł / mies.</span>
         </div>
         <div class="pricing-divider"></div>
         <ul class="feature-list">
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            AI asystent na Twojej stronie
-          </li>
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            Konfiguracja pod firmę
-          </li>
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            Dostosowanie wyglądu
-          </li>
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            Do 500 rozmów / mies.
-          </li>
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            E-mail support
-          </li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Asystent wpięty w Twoją obecną stronę</li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Konfiguracja pod Twoją firmę i ton</li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Dopasowanie wyglądu do brandu</li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Do 500 rozmów / mies.</li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Wsparcie e-mail</li>
         </ul>
-        <a href="mailto:kontakt@kontaktio.pl?subject=Plan%20Starter" class="btn btn-ghost btn-full">Wybierz Starter</a>
+        <a href="mailto:kontakt@kontaktio.pl?subject=Plan%20Starter" class="btn btn-ghost btn-full">Wybieram Starter</a>
       </div>
 
-      <!-- Growth (popular) -->
       <div class="pricing-card popular reveal reveal-delay-1">
-        <div class="popular-badge">Najpopularniejszy</div>
+        <div class="popular-badge">Najczęściej wybierany</div>
         <p class="t-small">Growth</p>
         <h3 class="t-h3">Strona + AI asystent</h3>
         <div class="price-row">
@@ -478,33 +497,17 @@
         </div>
         <div class="pricing-divider"></div>
         <ul class="feature-list">
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            Wszystko z planu Starter
-          </li>
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            Pełna strona internetowa
-          </li>
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            Zaawansowana personalizacja asystenta
-          </li>
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            Do 2000 rozmów / mies. + raporty
-          </li>
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            Priorytetowe wsparcie
-          </li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Wszystko z planu Starter</li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Pełna, nowa strona internetowa</li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Zaawansowana personalizacja asystenta</li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Do 2000 rozmów / mies. + raporty</li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Priorytetowe wsparcie</li>
         </ul>
-        <a href="mailto:kontakt@kontaktio.pl?subject=Plan%20Growth" class="btn btn-light btn-full">Wybierz Growth</a>
+        <a href="mailto:kontakt@kontaktio.pl?subject=Plan%20Growth" class="btn btn-light btn-full">Wybieram Growth</a>
       </div>
 
-      <!-- Enterprise -->
       <div class="pricing-card reveal reveal-delay-2">
-        <p class="t-small">Enterprise</p>
+        <p class="t-small">Custom</p>
         <h3 class="t-h3">Dla większej skali</h3>
         <div class="price-row">
           <span class="price-amount">Wycena</span>
@@ -512,159 +515,84 @@
         </div>
         <div class="pricing-divider"></div>
         <ul class="feature-list">
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            Wszystko z planu Growth
-          </li>
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            Dedykowane integracje
-          </li>
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            Własna baza wiedzy
-          </li>
-          <li class="feature-item">
-            <div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>
-            SLA i bez limitu rozmów
-          </li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Wszystko z planu Growth</li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Dedykowane integracje (kalendarz, formularze, e-mail)</li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>Własna baza wiedzy</li>
+          <li class="feature-item"><div class="feature-check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 5 4 7 8 3"/></svg></div>SLA i bez limitu rozmów</li>
         </ul>
-        <a href="mailto:kontakt@kontaktio.pl?subject=Plan%20Enterprise" class="btn btn-ghost btn-full">Porozmawiajmy</a>
+        <a href="mailto:kontakt@kontaktio.pl?subject=Plan%20Custom" class="btn btn-ghost btn-full">Porozmawiajmy</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ─── TESTIMONIALS ──────────────────────────── -->
-<section id="testimonials">
-  <div class="container">
-
-    <div class="section-header reveal">
-      <p class="t-small">Opinie</p>
-      <h2 class="t-h1">Co mówią klienci</h2>
-    </div>
-
-    <div class="testimonials-grid">
-
-      <div class="testimonial-card reveal">
-        <div class="quote-mark">"</div>
-        <p class="testimonial-text">Asystent przejął większość pytań „o ile, kiedy i gdzie". Telefon dzwoni rzadziej, a w skrzynce konkretne zapytania.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar"></div>
-          <div>
-            <div class="author-name">Anna K.</div>
-            <div class="author-role">Salon beauty, Łódź</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card reveal reveal-delay-1">
-        <div class="quote-mark">"</div>
-        <p class="testimonial-text">Rozmowa, wycena, gotowa strona — w niecały tydzień. Mała ekipa, bezpośredni kontakt, zero korpo-rozmów.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar author-avatar--gray"></div>
-          <div>
-            <div class="author-name">Marcin W.</div>
-            <div class="author-role">Mechanika, Pabianice</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card reveal reveal-delay-2">
-        <div class="quote-mark">"</div>
-        <p class="testimonial-text">Najbardziej cenię to, że asystent „nie zmyśla". Trzyma się naszych danych, a gdy czegoś nie wie — kieruje do kontaktu.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar author-avatar--sand"></div>
-          <div>
-            <div class="author-name">Karolina N.</div>
-            <div class="author-role">Catering, Warszawa</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ─── FAQ ───────────────────────────────────── -->
+<!-- ─── FAQ ───────────────────────────────────────────────────── -->
 <section id="faq">
   <div class="container">
-    <div class="faq-wrapper">
 
-      <div class="reveal">
-        <p class="t-small">FAQ</p>
-        <h2 class="t-h1">Pytania<br/>i odpowiedzi</h2>
+    <div class="section-header section-header--center reveal">
+      <p class="t-small">FAQ</p>
+      <h2 class="t-h1">Najczęstsze pytania.</h2>
+    </div>
+
+    <div class="faq-list faq-list--wide reveal">
+
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Ile naprawdę trwa wdrożenie?
+          <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
+        </div>
+        <div class="faq-a">Standardowo 48 godzin od akceptacji wyceny — zarówno strony, jak i asystenta. Czas zależy od ilości materiałów, które chcesz włożyć w bazę wiedzy asystenta i sposobu prowadzenia rozmowy.</div>
       </div>
 
-      <div class="faq-list reveal reveal-delay-1">
-
-        <div class="faq-item open">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Ile trwa wdrożenie?
-            <div class="faq-icon">
-              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M6 2v8M2 6h8"/>
-              </svg>
-            </div>
-          </div>
-          <div class="faq-a">Standardowo 48 godzin od akceptacji wyceny. Zależy od ilości informacji, którą chcesz umieścić w asystencie i sposobu prowadzenia rozmowy.</div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Czy asystent „wymyśla" odpowiedzi?
+          <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
         </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Czy asystent „wymyśla" odpowiedzi?
-            <div class="faq-icon">
-              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M6 2v8M2 6h8"/>
-              </svg>
-            </div>
-          </div>
-          <div class="faq-a">Asystent opiera się o konfigurację i wiedzę firmy. Jeśli czegoś nie ma w danych — informuje o tym i proponuje kontakt z Tobą.</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Czy mogę zmienić plan lub zrezygnować?
-            <div class="faq-icon">
-              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M6 2v8M2 6h8"/>
-              </svg>
-            </div>
-          </div>
-          <div class="faq-a">Tak. Minimalny kontrakt to 3 miesiące — po tym czasie możesz zmienić plan lub zrezygnować z miesięcznym wypowiedzeniem.</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Czy można dopasować wygląd do strony?
-            <div class="faq-icon">
-              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M6 2v8M2 6h8"/>
-              </svg>
-            </div>
-          </div>
-          <div class="faq-a">Tak. Kolory, typografia i zachowanie widgetu są konfigurowalne tak, żeby pasowały do Twojego brandu.</div>
-        </div>
-
+        <div class="faq-a">Nie. Asystent opiera się o konfigurację i Twoje dane. Jeśli czegoś nie ma w bazie wiedzy — informuje o tym i proponuje kontakt z Tobą lub Twoim zespołem.</div>
       </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Czy mogę zmienić plan albo zrezygnować?
+          <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
+        </div>
+        <div class="faq-a">Tak. Minimalny okres współpracy to 3 miesiące. Po nim możesz zmienić plan w dowolnym momencie albo zrezygnować z miesięcznym wypowiedzeniem.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Czy asystent będzie pasował do mojej strony?
+          <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
+        </div>
+        <div class="faq-a">Tak. Kolory, typografia i ton asystenta są dopasowywane do Twojej marki. Wpinamy go w Twoją obecną stronę albo budujemy nową — w zależności od planu.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          A jeśli moja branża jest „nietypowa"?
+          <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
+        </div>
+        <div class="faq-a">Tym lepiej. Asystenta konfigurujemy od zera dla każdej firmy. Nieważne, czy prowadzisz hotel butikowy, warsztat motocyklowy, czy szkołę językową — pytania klientów spisujemy razem z Tobą.</div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ─── CTA SECTION ───────────────────────────── -->
+<!-- ─── CTA SECTION ───────────────────────────────────────────── -->
 <section id="cta-section">
   <div class="container">
     <div class="cta-block reveal">
       <p class="t-small">Gotowy?</p>
-      <h2 class="t-display">Zbudujmy coś<br/>konkretnego.</h2>
-      <p class="t-body">Bezpłatna wycena. Odpowiadamy w ciągu 24 godzin.</p>
+      <h2 class="t-display">Niech Twoja strona<br/>zacznie pracować.</h2>
+      <p class="t-body">Bezpłatna wycena, odpowiedź w 24 godziny, wdrożenie w 48. Bez zobowiązań po Twojej stronie.</p>
       <div class="cta-actions">
         <a href="mailto:kontakt@kontaktio.pl?subject=Bezp%C5%82atna%20wycena" class="btn btn-light">
           Bezpłatna wycena
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 8h10M9 4l4 4-4 4"/>
-          </svg>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
         <a href="mailto:kontakt@kontaktio.pl" class="btn btn-ghost-dark">kontakt@kontaktio.pl</a>
       </div>
@@ -672,7 +600,7 @@
   </div>
 </section>
 
-<!-- ─── FOOTER ────────────────────────────────── -->
+<!-- ─── FOOTER ────────────────────────────────────────────────── -->
 <footer>
   <div class="container">
 
@@ -685,7 +613,7 @@
           </div>
           <span class="logo-name">Kontaktio</span>
         </a>
-        <p>Mała ekipa z Łódzkiego. Strony internetowe i AI asystenci dla firm — wdrożenie w 48&nbsp;godzin.</p>
+        <p>Mała ekipa z Łódzkiego. Strony internetowe i AI asystenci dla firm — wdrożenie w 48&nbsp;godzin, działamy w całej Polsce.</p>
       </div>
 
       <div class="footer-col">
