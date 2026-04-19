@@ -1146,3 +1146,126 @@ footer{
   .contact-card, .team-card{ padding:28px; }
   .scroll-cue{ margin-top:50px; }
 }
+
+/* ==========================================================================
+   PREMIUM POLISH — accessibility, focus, cursor glow, button shine
+   ========================================================================== */
+
+/* ── Skip link (a11y) ──────────────────────────────────────────────── */
+.skip-link{
+  position:absolute;
+  left:-9999px; top:auto;
+  width:1px; height:1px;
+  overflow:hidden;
+  z-index:1000;
+}
+.skip-link:focus{
+  left:16px; top:16px;
+  width:auto; height:auto;
+  padding:10px 16px;
+  background:var(--ink); color:var(--bg);
+  border-radius:999px;
+  font-weight:500; font-size:14px;
+  outline:2px solid var(--ink); outline-offset:2px;
+}
+
+/* ── Visible focus ring for keyboard users ─────────────────────────── */
+*:focus{ outline:none; }
+*:focus-visible{
+  outline:2px solid var(--ink);
+  outline-offset:3px;
+  border-radius:6px;
+}
+.btn:focus-visible{ outline-offset:4px; }
+
+/* ── Cursor-tracking glow on cards (driven by JS pointermove vars) ── */
+.principle, .cap, .price-card, .team-card, .contact-card, .faq-item{
+  position:relative;
+  isolation:isolate;
+}
+.principle::before, .cap::before, .price-card::before,
+.team-card::before, .contact-card::before, .faq-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:radial-gradient(
+    320px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(13,13,13,.08),
+    transparent 55%
+  );
+  opacity:0;
+  transition:opacity .45s var(--ease);
+  pointer-events:none;
+  z-index:0;
+}
+.price-card.featured::before{
+  background:radial-gradient(
+    320px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(255,255,255,.10),
+    transparent 55%
+  );
+}
+.principle:hover::before, .cap:hover::before, .price-card:hover::before,
+.team-card:hover::before, .contact-card:hover::before, .faq-item:hover::before{
+  opacity:1;
+}
+.principle > *, .cap > *, .price-card > *,
+.team-card > *, .contact-card > *, .faq-item > *{
+  position:relative;
+  z-index:1;
+}
+
+/* ── Premium button shine (sweeping highlight on hover) ────────────── */
+.btn{ overflow:hidden; }
+.btn::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(255,255,255,.18) 50%,
+    transparent 70%
+  );
+  transform:translateX(-110%);
+  transition:transform .9s var(--ease-out);
+  pointer-events:none;
+  border-radius:inherit;
+}
+.btn:hover::after{ transform:translateX(110%); }
+.btn-ghost::after{
+  background:linear-gradient(
+    115deg,
+    transparent 30%,
+    rgba(13,13,13,.08) 50%,
+    transparent 70%
+  );
+}
+.btn > *{ position:relative; z-index:1; }
+
+/* ── Logo mark — subtle premium glow on hover ──────────────────────── */
+.logo{ position:relative; }
+.logo .logo-mark{
+  transition:transform .5s var(--ease-out), box-shadow .5s var(--ease);
+}
+.logo:hover .logo-mark{
+  transform:rotate(-4deg) scale(1.04);
+  box-shadow:0 6px 20px -6px rgba(13,13,13,.45);
+}
+
+/* ── Performance: defer non-critical paint of below-the-fold sections */
+@supports (content-visibility: auto){
+  section.block, footer{
+    content-visibility:auto;
+    contain-intrinsic-size: 1px 800px;
+  }
+}
+
+/* Respect reduced motion for new effects too */
+@media (prefers-reduced-motion: reduce){
+  .btn::after{ display:none; }
+  .principle::before, .cap::before, .price-card::before,
+  .team-card::before, .contact-card::before, .faq-item::before{ display:none; }
+  .logo:hover .logo-mark{ transform:none; }
+}
