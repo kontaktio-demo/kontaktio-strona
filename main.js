@@ -1,83 +1,132 @@
-/* ─── CURSOR GLOW ──────────────────────────────── */
-const glow = document.getElementById('cursorGlow');
-let mx = 0, my = 0, cx = 0, cy = 0;
+/* ==========================================================================
+   Kontaktio — interactions
+   ========================================================================== */
 
-document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+/* ── Cursor glow removed (clean, minimal feel) ──────────────────────────── */
 
-(function animate() {
-  cx += (mx - cx) * 0.08;
-  cy += (my - cy) * 0.08;
-  glow.style.left = cx + 'px';
-  glow.style.top  = cy + 'px';
-  requestAnimationFrame(animate);
+/* ── Scroll progress bar ────────────────────────────────────────────────── */
+(() => {
+  const bar = document.querySelector('.scroll-progress');
+  if (!bar) return;
+  const update = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    bar.style.width = pct + '%';
+  };
+  document.addEventListener('scroll', update, { passive: true });
+  update();
 })();
 
-/* ─── SERVICE CARD MOUSE-TRACKING RADIAL ───────── */
-document.querySelectorAll('.service-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const r = card.getBoundingClientRect();
-    card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
-    card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+/* ── Nav shadow on scroll ───────────────────────────────────────────────── */
+(() => {
+  const nav = document.querySelector('nav.site-nav');
+  if (!nav) return;
+  const update = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  document.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+/* ── Mobile menu toggle ─────────────────────────────────────────────────── */
+(() => {
+  const burger = document.querySelector('.nav-burger');
+  if (!burger) return;
+  burger.addEventListener('click', () => {
+    document.body.classList.toggle('menu-open');
   });
-});
-
-/* ─── SCROLL REVEAL ────────────────────────────── */
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      revealObserver.unobserve(e.target);
-    }
+  document.querySelectorAll('.mobile-nav a').forEach(a => {
+    a.addEventListener('click', () => document.body.classList.remove('menu-open'));
   });
-}, { threshold: 0.12 });
+})();
 
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-/* ─── FAQ TOGGLE ───────────────────────────────── */
-function toggleFaq(el) {
-  const item = el.parentElement;
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
-}
-
-/* ─── NAV SHADOW ON SCROLL ─────────────────────── */
-const nav = document.querySelector('nav');
-window.addEventListener('scroll', () => {
-  nav.style.borderBottomColor = window.scrollY > 20
-    ? 'rgba(0,0,0,.1)'
-    : 'rgba(0,0,0,.06)';
-}, { passive: true });
-
-/* ─── COUNTER ANIMATION ────────────────────────── */
-function animateCounter(el, target, suffix, duration = 1600) {
-  let start = null;
-  const isFloat = target % 1 !== 0;
-
-  function step(ts) {
-    if (!start) start = ts;
-    const progress = Math.min((ts - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const val = isFloat
-      ? (eased * target).toFixed(1)
-      : Math.round(eased * target);
-    el.textContent = val + suffix;
-    if (progress < 1) requestAnimationFrame(step);
+/* ── Reveal on scroll (IntersectionObserver) ────────────────────────────── */
+(() => {
+  const els = document.querySelectorAll('.reveal, .split-line');
+  if (!els.length || !('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('is-in'));
+    return;
   }
-  requestAnimationFrame(step);
-}
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => io.observe(el));
+})();
 
-const counterObserver = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    const el = e.target;
-    const raw = el.dataset.count;
-    const suffix = el.dataset.suffix || '';
-    if (raw) animateCounter(el, parseFloat(raw), suffix);
-    counterObserver.unobserve(el);
+/* ── Split text — splits .split-line headings into chars for cascade ───── */
+(() => {
+  document.querySelectorAll('.split-line').forEach(el => {
+    if (el.dataset.split) return;
+    const text = el.textContent;
+    el.textContent = '';
+    [...text].forEach((ch, i) => {
+      const span = document.createElement('span');
+      span.className = 'split-char';
+      span.style.transitionDelay = (i * 18) + 'ms';
+      span.textContent = ch === ' ' ? '\u00A0' : ch;
+      el.appendChild(span);
+    });
+    el.dataset.split = 'true';
   });
-}, { threshold: 0.5 });
+})();
 
-document.querySelectorAll('.stat-number[data-count]').forEach(el => {
-  counterObserver.observe(el);
-});
+/* ── Magnetic buttons ───────────────────────────────────────────────────── */
+(() => {
+  if (!window.matchMedia('(hover:hover)').matches) return;
+  document.querySelectorAll('.magnetic').forEach(btn => {
+    const strength = 14;
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width  - 0.5) * strength;
+      const y = ((e.clientY - r.top)  / r.height - 0.5) * strength;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+    });
+  });
+})();
+
+/* ── Subtle parallax for hero orbs ──────────────────────────────────────── */
+(() => {
+  const orbs = document.querySelectorAll('.hero-orb');
+  if (!orbs.length) return;
+  let ticking = false;
+  document.addEventListener('scroll', () => {
+    if (ticking) return;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      orbs.forEach((orb, i) => {
+        const speed = (i + 1) * 0.06;
+        orb.style.translate = `0 ${y * speed}px`;
+      });
+      ticking = false;
+    });
+    ticking = true;
+  }, { passive: true });
+})();
+
+/* ── FAQ accordion ──────────────────────────────────────────────────────── */
+(() => {
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const open = item.classList.contains('open');
+      item.parentElement.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!open) item.classList.add('open');
+    });
+  });
+})();
+
+/* ── Mark active nav link ───────────────────────────────────────────────── */
+(() => {
+  const path = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav.site-nav .nav-links a').forEach(a => {
+    const href = a.getAttribute('href') || '';
+    if (href === path) a.classList.add('is-active');
+  });
+})();
