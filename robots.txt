@@ -3,5 +3,9 @@ Allow: /
 Disallow: /1.html
 Disallow: /1.css
 Disallow: /1.js
+Disallow: /DEMO-
+
+# Be polite with aggressive crawlers but allow indexing
+Crawl-delay: 1
 
 Sitemap: https://kontaktio.pl/sitemap.xml

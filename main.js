@@ -130,3 +130,53 @@
     if (href === path) a.classList.add('is-active');
   });
 })();
+
+/* ── Premium cursor-tracking glow on cards ──────────────────────────────── */
+(() => {
+  if (!window.matchMedia('(hover:hover)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const sel = '.principle, .cap, .price-card, .team-card, .contact-card, .faq-item';
+  const cards = document.querySelectorAll(sel);
+  if (!cards.length) return;
+  cards.forEach(card => {
+    let raf = 0;
+    card.addEventListener('pointermove', e => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', ((e.clientX - r.left) / r.width  * 100) + '%');
+        card.style.setProperty('--my', ((e.clientY - r.top)  / r.height * 100) + '%');
+        raf = 0;
+      });
+    }, { passive: true });
+  });
+})();
+
+/* ── Lazy-load 3rd-party chat widget after window load + idle ──────────── */
+(() => {
+  const tag = document.querySelector('script[data-kontaktio][data-src]');
+  if (!tag) return;
+  // Hardcoded, same-origin script path. Avoids any DOM-sourced URL flowing
+  // into a script src (defence against XSS via tampered HTML).
+  const SCRIPT_PATH = 'kontaktio.js';
+  const inject = () => {
+    const s = document.createElement('script');
+    // Copy only known-safe data-* config attributes onto the new tag.
+    const ALLOWED = new Set(['data-kontaktio', 'data-client', 'data-backend']);
+    for (const a of tag.attributes) {
+      if (ALLOWED.has(a.name)) s.setAttribute(a.name, a.value);
+    }
+    s.src = SCRIPT_PATH;
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.referrerPolicy = 'no-referrer';
+    // Remove placeholder so the chatbot script only sees one config tag
+    tag.parentNode && tag.parentNode.removeChild(tag);
+    document.body.appendChild(s);
+  };
+  const start = () => ('requestIdleCallback' in window
+      ? requestIdleCallback(inject, { timeout: 2500 })
+      : setTimeout(inject, 1500));
+  if (document.readyState === 'complete') start();
+  else window.addEventListener('load', start, { once: true });
+})();
