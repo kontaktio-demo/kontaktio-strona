@@ -34,6 +34,7 @@
 
     const heroEls = [title, lead, ...acts, cue].filter(Boolean);
     handover(heroEls, { opacity: 0, y: 60 });
+    if (title) g.set(title, { scale: 0.96, rotateX: 12, transformOrigin: 'top center' });
 
     const tl = g.timeline({ defaults: { ease: 'power4.out' } });
     if (title) tl.to(title, { opacity: 1, y: 0, duration: 1.2, scale: 1, rotateX: 0 }, 0);
