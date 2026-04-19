@@ -4,156 +4,162 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQ | Kontaktio</title>
-  <meta name="description" content="Najczęstsze pytania o wdrożenie AI asystenta Kontaktio: czas realizacji, ceny, integracje, bezpieczeństwo." />
-  <meta name="theme-color" content="#f9f8f6" />
+  <meta name="description" content="Najczęstsze pytania o AI asystenta Kontaktio: ceny, integracje, bezpieczeństwo, wygląd i konfiguracja." />
+  <meta name="theme-color" content="#f6f5f1" />
   <link rel="canonical" href="https://kontaktio.pl/faq.html" />
   <link rel="icon" href="favicon.ico" sizes="48x48" />
   <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<div class="cursor-glow" id="cursorGlow"></div>
-<nav>
+<div class="scroll-progress"></div>
+
+<nav class="site-nav">
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="logo">
-        <div class="logo-mark logo-mark--img">
-          <img src="czarne.png" alt="" aria-hidden="true" width="18" height="18" />
-        </div>
-        <span class="logo-name">Kontaktio</span>
+        <span class="logo-mark"><img src="czarne.png" alt="" aria-hidden="true" width="16" height="16" /></span>
+        <span>Kontaktio</span>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html#services">Usługi</a></li>
-        <li><a href="branze.html">Branże</a></li>
+        <li><a href="index.html">Start</a></li>
         <li><a href="realizacje.html">Realizacje</a></li>
         <li><a href="cennik.html">Cennik</a></li>
         <li><a href="o-nas.html">O nas</a></li>
         <li><a href="faq.html">FAQ</a></li>
       </ul>
-      <a href="kontakt.html" class="btn btn-primary nav-cta">
+      <a href="kontakt.html" class="btn btn-primary nav-cta magnetic">
         Porozmawiajmy
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
       </a>
+      <button class="nav-burger" aria-label="Otwórz menu"><span></span></button>
     </div>
   </div>
 </nav>
+<div class="mobile-nav" aria-hidden="true">
+  <a href="index.html">Start</a>
+  <a href="realizacje.html">Realizacje</a>
+  <a href="cennik.html">Cennik</a>
+  <a href="o-nas.html">O nas</a>
+  <a href="faq.html">FAQ</a>
+  <a href="kontakt.html">Kontakt</a>
+</div>
+
 <main>
-<section class="sub-hero">
-  <div class="hero-bg"></div>
+<section class="subhead">
   <div class="container">
-    <div class="sub-hero-inner reveal visible">
-      <a href="index.html" class="crumb">
-        <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 4l-4 4 4 4"/></svg>
-        Strona główna
-      </a>
-      <h1 class="t-h1">FAQ — <span class='accent-word'>najczęstsze pytania</span></h1>
-      <p class="lead">Pytania, które padają na początku każdej rozmowy. Jeśli nie znajdziesz tu odpowiedzi — napisz na kontakt@kontaktio.pl, odpiszemy w 24h.</p>
-    </div>
+    <a href="index.html" class="crumb reveal is-in">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 4l-4 4 4 4"/></svg>
+      Strona główna
+    </a>
+    <h1 class="t-h1 reveal reveal-delay-1 is-in">FAQ — <em>najczęstsze</em><br/>pytania.</h1>
+    <p class="t-lead reveal reveal-delay-2 is-in" style="margin-top:24px;">Pytania, które padają na początku każdej rozmowy. Jeśli nie znajdziesz tu odpowiedzi — napisz, odpowiadamy bezpośrednio.</p>
   </div>
 </section>
-<section style="padding-top:60px; padding-bottom:120px; background: var(--beige);">
+
+<section class="block">
   <div class="container">
-    <div class="faq-list reveal visible" style="max-width: 820px; margin: 0 auto;">
-        <div class="faq-item open">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Ile trwa wdrożenie?
-            <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
-          </div>
-          <div class="faq-a">Standardowo 48 godzin od akceptacji wyceny. Wszystko zależy od ilości informacji, którą chcesz umieścić w asystencie i sposobu prowadzenia rozmowy.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Czy asystent może umawiać terminy?
-            <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
-          </div>
-          <div class="faq-a">Może zbierać informacje od klienta i kierować do kontaktu. Jeśli potrzebujesz pełnej rezerwacji z kalendarzem, dobieramy rozwiązanie do Twojego procesu — w planie Growth lub Enterprise.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Czy asystent „wymyśla" odpowiedzi?
-            <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
-          </div>
-          <div class="faq-a">Asystent opiera się o konfigurację i wiedzę firmy. Jeśli czegoś nie ma w danych — informuje o tym i proponuje kontakt z Tobą.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Czy to działa na telefonie?
-            <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
-          </div>
-          <div class="faq-a">Tak. Widget i strona są w pełni zoptymalizowane pod urządzenia mobilne.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Czy można dopasować wygląd do strony?
-            <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
-          </div>
-          <div class="faq-a">Tak. Kolory, typografia i zachowanie widgetu są konfigurowalne tak, żeby pasowały do Twojego brandu.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Czy mogę zmienić plan lub zrezygnować?
-            <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
-          </div>
-          <div class="faq-a">Tak. Minimalny kontrakt to 3 miesiące — po tym czasie możesz zmienić plan lub zrezygnować z miesięcznym wypowiedzeniem.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Jak wygląda wsparcie po wdrożeniu?
-            <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
-          </div>
-          <div class="faq-a">Kontaktujesz się z nami bezpośrednio — e-mail lub rozmowa. Bez ticketów i kolejek. To przewaga małej ekipy.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Czy potrzebuję domeny i hostingu?
-            <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
-          </div>
-          <div class="faq-a">W planach miesięcznych zajmujemy się tym za Ciebie. Przy projekcie jednorazowym — możesz mieć własne, my podłączymy.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Czy moje dane są bezpieczne?
-            <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
-          </div>
-          <div class="faq-a">Tak. Stosujemy szyfrowanie SSL/TLS, dane w UE/USA z odpowiednimi zabezpieczeniami RODO. Szczegóły w polityce prywatności.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Czy mogę zobaczyć przykład działającego asystenta?
-            <div class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></div>
-          </div>
-          <div class="faq-a">Tak — kliknij ikonę czatu w prawym dolnym rogu strony. To dokładnie taki asystent, jakiego możesz mieć u siebie.</div>
-        </div>
+    <div class="faq reveal">
+      <div class="faq-item open">
+        <button class="faq-q" type="button">
+          Czy asystent „wymyśla" odpowiedzi?
+          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Nie. Asystent opiera się o konfigurację i wiedzę firmy. Jeśli czegoś nie ma w danych — informuje o tym i proponuje kontakt z Tobą.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          Czy asystent może umawiać terminy?
+          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Może zbierać informacje od klienta i kierować do kontaktu. Jeśli potrzebujesz pełnej rezerwacji z kalendarzem, dobieramy rozwiązanie do Twojego procesu — w planie Growth lub Custom.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          Czy to działa na telefonie?
+          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Tak. Widget i strona są w pełni zoptymalizowane pod urządzenia mobilne.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          Czy można dopasować wygląd do strony?
+          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Tak. Kolory, typografia i zachowanie widgetu są konfigurowalne tak, żeby pasowały do Twojego brandu.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          Czy mogę zmienić plan lub zrezygnować?
+          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Tak. Minimalny kontrakt to 3 miesiące — po tym czasie możesz zmienić plan lub zrezygnować z miesięcznym wypowiedzeniem.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          Jak wygląda wsparcie po wdrożeniu?
+          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Kontaktujesz się z nami bezpośrednio — e-mail lub rozmowa. Bez ticketów i kolejek. To przewaga małej ekipy.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          Czy potrzebuję domeny i hostingu?
+          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
+        </button>
+        <div class="faq-a"><p>W planach miesięcznych zajmujemy się tym za Ciebie. Przy projekcie jednorazowym — możesz mieć własne, my podłączymy.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          Czy moje dane są bezpieczne?
+          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Tak. Stosujemy szyfrowanie SSL/TLS, dane w UE/USA z odpowiednimi zabezpieczeniami RODO. Szczegóły w polityce prywatności.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          Czy mogę zobaczyć przykład działającego asystenta?
+          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Tak — kliknij ikonę czatu w prawym dolnym rogu strony. To dokładnie taki asystent, jakiego możesz mieć u siebie.</p></div>
+      </div>
     </div>
 
-    <div style="text-align:center; margin-top:64px;" class="reveal visible">
+    <div style="text-align:center; margin-top:64px;" class="reveal">
       <p class="t-body" style="margin-bottom:24px;">Nie znalazłeś odpowiedzi?</p>
-      <a href="mailto:kontakt@kontaktio.pl" class="btn btn-primary">Napisz do nas <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <a href="mailto:kontakt@kontaktio.pl" class="btn btn-primary magnetic">Napisz do nas <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
     </div>
   </div>
 </section>
-
 </main>
+
 <footer>
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="index.html" class="logo footer-logo">
-          <div class="logo-mark logo-mark--light logo-mark--img">
-            <img src="czarne.png" alt="" aria-hidden="true" width="18" height="18" />
-          </div>
-          <span class="logo-name">Kontaktio</span>
+        <a href="index.html" class="logo">
+          <span class="logo-mark"><img src="czarne.png" alt="" aria-hidden="true" width="16" height="16" /></span>
+          <span>Kontaktio</span>
         </a>
-        <p>Mała ekipa z Łódzkiego. Strony internetowe i AI asystenci dla firm — wdrożenie w 48&nbsp;godzin.</p>
+        <p>Strony internetowe i AI asystenci dla firm. Spokojnie, konkretnie, bez ukrytych kosztów.</p>
       </div>
       <div class="footer-col">
         <h4>Strony</h4>
         <ul>
-          <li><a href="index.html">Strona główna</a></li>
-          <li><a href="branze.html">Branże</a></li>
+          <li><a href="index.html">Start</a></li>
           <li><a href="realizacje.html">Realizacje</a></li>
           <li><a href="cennik.html">Cennik</a></li>
           <li><a href="o-nas.html">O nas</a></li>
@@ -178,18 +184,14 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Kontaktio Bartosz Fiks — wszelkie prawa zastrzeżone</span>
-      <div class="footer-socials">
-        <a href="mailto:kontakt@kontaktio.pl" class="social-link" aria-label="E-mail">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="5" width="18" height="14" rx="2"/>
-            <polyline points="3 7 12 13 21 7"/>
-          </svg>
-        </a>
-      </div>
+      <span>© 2026 Kontaktio Bartosz Fiks</span>
+      <a href="mailto:kontakt@kontaktio.pl" class="social" aria-label="E-mail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+      </a>
     </div>
   </div>
 </footer>
+
 <script src="main.js"></script>
 <script
   data-kontaktio
