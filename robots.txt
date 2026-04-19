@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /1.html
+Disallow: /1.css
+Disallow: /1.js
+
+Sitemap: https://kontaktio.pl/sitemap.xml

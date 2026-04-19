@@ -1,0 +1,42 @@
+{
+  "name": "Kontaktio - Asystenci AI dla firm",
+  "short_name": "Kontaktio",
+  "description": "Strony WWW i AI asystenci dla firm. Wdrożenie w 48h od 499 zł / mies.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f9f8f6",
+  "theme_color": "#1a1a1a",
+  "orientation": "portrait-primary",
+  "lang": "pl",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [],
+  "categories": ["business", "productivity"],
+  "prefer_related_applications": false
+}
