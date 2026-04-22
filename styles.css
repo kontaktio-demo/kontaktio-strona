@@ -188,16 +188,17 @@ a.text-link:hover { color: var(--muted); }
   height: 76px;
 }
 .nav__logo {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-weight: 700; letter-spacing: -0.02em; font-size: 1.05rem;
+  display: inline-flex; align-items: center;
+  font-weight: 800; letter-spacing: -0.035em; font-size: 1.15rem;
+  color: var(--ink);
 }
 .nav__logo-mark {
-  width: 28px; height: 28px;
-  display: inline-grid; place-items: center;
-  background: var(--ink); color: var(--white);
-  border-radius: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 30px; flex-shrink: 0;
 }
-.nav__logo-mark svg { width: 16px; height: 16px; }
+.nav__logo-mark img,
+.nav__logo-mark svg { height: 100%; width: auto; display: block; }
+.footer .nav__logo-mark { height: 28px; }
 
 .nav__menu {
   display: none;
