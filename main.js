@@ -155,11 +155,19 @@
         return;
       }
       // No backend: open user's mail client with a safely-encoded message.
-      const subject = `Zapytanie ze strony kontaktio.pl — ${fields.name.value.trim()}`;
+      // Defence-in-depth: strip CR/LF from single-line fields to avoid any
+      // chance of header injection in non-conformant mail clients, then rely
+      // on encodeURIComponent for transport-level escaping.
+      const stripCtl   = (s) => String(s).replace(/[\r\n\t]+/g, " ").trim();
+      const cleanBody  = (s) => String(s).replace(/\r\n?/g, "\n").trim();
+      const safeName   = stripCtl(fields.name.value).slice(0, 80);
+      const safeEmail  = stripCtl(fields.email.value).slice(0, 120);
+      const safeMsg    = cleanBody(fields.message.value).slice(0, 3000);
+      const subject = `Zapytanie ze strony kontaktio.pl — ${safeName}`;
       const body =
-        `Imię: ${fields.name.value.trim()}\n` +
-        `E-mail: ${fields.email.value.trim()}\n\n` +
-        `Wiadomość:\n${fields.message.value.trim()}\n`;
+        `Imię: ${safeName}\n` +
+        `E-mail: ${safeEmail}\n\n` +
+        `Wiadomość:\n${safeMsg}\n`;
       const href =
         "mailto:kontakt@kontaktio.pl" +
         "?subject=" + encodeURIComponent(subject) +
