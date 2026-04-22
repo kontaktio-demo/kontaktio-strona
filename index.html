@@ -3,47 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontaktio — Strony i AI asystenci dla firm</title>
-  <meta name="description" content="Projektujemy minimalistyczne strony internetowe i wdrażamy AI asystentów dopasowanych do Twojej firmy. Prosto, konkretnie, bez ukrytych kosztów." />
-  <meta name="theme-color" content="#f6f5f1" />
+  <title>Kontaktio — Projektujemy nowoczesne strony internetowe dla firm</title>
+  <meta name="description" content="Studio Kontaktio projektuje i koduje premium strony internetowe od zera — szybkie, dopracowane, skuteczne. Witryny, sklepy, redesign, SEO techniczne, support." />
+  <meta name="theme-color" content="#ffffff" />
   <meta name="color-scheme" content="light" />
   <link rel="canonical" href="https://kontaktio.pl/" />
-  <!-- ── Performance hints ─────────────────────────────────────────── -->
+
+  <!-- Performance hints -->
   <link rel="preload" href="styles.css" as="style" />
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="dns-prefetch" href="https://chatbot-backend-x2cy.onrender.com" />
   <link rel="preconnect" href="https://chatbot-backend-x2cy.onrender.com" crossorigin />
-  <link rel="prefetch" href="cennik.html" />
+  <link rel="prefetch" href="realizacje.html" />
   <link rel="prefetch" href="kontakt.html" />
 
-  <!-- ── Security (defence-in-depth via meta) ──────────────────────── -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://chatbot-backend-x2cy.onrender.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://chatbot-backend-x2cy.onrender.com https://cdn.jsdelivr.net wss://chatbot-backend-x2cy.onrender.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests" />
+  <!-- Security (defence-in-depth via meta) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://chatbot-backend-x2cy.onrender.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://chatbot-backend-x2cy.onrender.com https://cdn.jsdelivr.net wss://chatbot-backend-x2cy.onrender.com; frame-src https://www.google.com https://maps.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" />
 
-  <!-- ── SEO: discoverability & rich previews ──────────────────────── -->
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <!-- SEO -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="author" content="Kontaktio" />
-  <meta name="generator" content="Kontaktio" />
   <meta name="format-detection" content="telephone=no" />
   <link rel="alternate" hreflang="pl-PL" href="https://kontaktio.pl/" />
   <link rel="alternate" hreflang="x-default" href="https://kontaktio.pl/" />
 
+  <!-- Open Graph / Twitter -->
   <meta property="og:locale" content="pl_PL" />
   <meta property="og:site_name" content="Kontaktio" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kontaktio — Projektujemy nowoczesne strony internetowe dla firm" />
+  <meta property="og:description" content="Premium witryny budowane od zera. Projekt, kod, SEO i support pod jednym dachem." />
+  <meta property="og:url" content="https://kontaktio.pl/" />
   <meta property="og:image" content="https://kontaktio.pl/favicon-512x512.png" />
   <meta property="og:image:width" content="512" />
   <meta property="og:image:height" content="512" />
-  <meta property="og:image:alt" content="Kontaktio — strony i AI asystenci dla firm" />
+  <meta property="og:image:alt" content="Kontaktio — studio stron internetowych" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Kontaktio" />
-  <meta name="twitter:description" content="Minimalistyczne strony i AI asystenci dla firm. Bez ukrytych kosztów." />
+  <meta name="twitter:description" content="Premium witryny budowane od zera." />
   <meta name="twitter:image" content="https://kontaktio.pl/favicon-512x512.png" />
 
-
+  <!-- Favicons -->
   <link rel="icon" href="favicon.ico" sizes="48x48" />
   <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -52,492 +54,538 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="manifest" href="manifest.json" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Kontaktio — Strony i AI asystenci dla firm" />
-  <meta property="og:description" content="Minimalistyczne strony internetowe i AI asystenci, którzy mówią tonem Twojej firmy." />
-  <meta property="og:url" content="https://kontaktio.pl/" />
-
   <link rel="stylesheet" href="styles.css" />
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://kontaktio.pl/#org","name":"Kontaktio","legalName":"Kontaktio Bartosz Fiks","url":"https://kontaktio.pl/","logo":"https://kontaktio.pl/favicon-512x512.png","image":"https://kontaktio.pl/favicon-512x512.png","email":"kontakt@kontaktio.pl","vatID":"PL7282909882","taxID":"7282909882","areaServed":{"@type":"Country","name":"Poland"},"address":{"@type":"PostalAddress","addressRegion":"Łódzkie","addressCountry":"PL"},"contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"kontakt@kontaktio.pl","availableLanguage":["pl","en"]}}</script>
+  <!-- Schema.org -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://kontaktio.pl/#org","name":"Kontaktio","legalName":"Kontaktio Bartosz Fiks","url":"https://kontaktio.pl/","logo":"https://kontaktio.pl/favicon-512x512.png","email":"kontakt@kontaktio.pl","vatID":"PL7282909882","taxID":"7282909882","areaServed":{"@type":"Country","name":"Poland"},"address":{"@type":"PostalAddress","addressRegion":"Łódzkie","addressCountry":"PL"},"contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"kontakt@kontaktio.pl","availableLanguage":["pl","en"]}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://kontaktio.pl/#website","url":"https://kontaktio.pl/","name":"Kontaktio","inLanguage":"pl-PL","publisher":{"@id":"https://kontaktio.pl/#org"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://kontaktio.pl/#business","name":"Kontaktio","image":"https://kontaktio.pl/favicon-512x512.png","url":"https://kontaktio.pl/","email":"kontakt@kontaktio.pl","priceRange":"499 zł – Wycena indywidualna","areaServed":"PL","address":{"@type":"PostalAddress","addressRegion":"Łódzkie","addressCountry":"PL"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"AI asystenci i strony internetowe dla firm","provider":{"@id":"https://kontaktio.pl/#org"},"areaServed":{"@type":"Country","name":"Poland"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Plany Kontaktio","itemListElement":[{"@type":"Offer","name":"Starter","price":"499","priceCurrency":"PLN","priceSpecification":{"@type":"UnitPriceSpecification","price":"499","priceCurrency":"PLN","billingIncrement":1,"unitCode":"MON"}},{"@type":"Offer","name":"Growth","price":"999","priceCurrency":"PLN","priceSpecification":{"@type":"UnitPriceSpecification","price":"999","priceCurrency":"PLN","billingIncrement":1,"unitCode":"MON"}},{"@type":"Offer","name":"Custom","description":"Wycena indywidualna"}]}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://kontaktio.pl/#business","name":"Kontaktio","image":"https://kontaktio.pl/favicon-512x512.png","url":"https://kontaktio.pl/","email":"kontakt@kontaktio.pl","priceRange":"$$","areaServed":"PL","address":{"@type":"PostalAddress","addressRegion":"Łódzkie","addressCountry":"PL"}}</script>
 </head>
 <body>
+
 <a class="skip-link" href="#main">Przejdź do treści</a>
+<div class="scroll-progress" aria-hidden="true"></div>
 
-
-<div class="scroll-progress"></div>
-
-<!-- ─── NAV ─── -->
-<nav class="site-nav">
+<!-- ── NAV ─────────────────────────────────────────────────────────── -->
+<header class="nav" role="banner">
   <div class="container">
-    <div class="nav-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5.2 2.6 4 15.4"/><path d="M12.6 4.1 6 9.4"/><path d="M6.7 9 11.4 15.4"/><circle cx="13.4" cy="3.6" r="1.35" fill="currentColor" stroke="none"/></svg></span>
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Kontaktio — strona główna">
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <path d="M5.2 2.6 4 15.4"/>
+            <path d="M12.6 4.1 6 9.4"/>
+            <path d="M6.7 9 11.4 15.4"/>
+            <circle cx="13.4" cy="3.6" r="1.35" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
         <span>Kontaktio</span>
       </a>
 
-      <ul class="nav-links">
-        <li><a href="index.html">Start</a></li>
-        <li><a href="realizacje.html">Realizacje</a></li>
-        <li><a href="cennik.html">Cennik</a></li>
-        <li><a href="o-nas.html">O nas</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
+      <nav aria-label="Główna nawigacja">
+        <ul class="nav__menu">
+          <li><a href="index.html#uslugi">Usługi</a></li>
+          <li><a href="index.html#proces">Proces</a></li>
+          <li><a href="realizacje.html">Realizacje</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
 
-      <a href="kontakt.html" class="btn btn-primary nav-cta magnetic">
-        Porozmawiajmy
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-      </a>
-
-      <button class="nav-burger" aria-label="Otwórz menu"><span></span></button>
-    </div>
-  </div>
-</nav>
-<div class="mobile-nav" aria-hidden="true">
-  <a href="index.html">Start</a>
-  <a href="realizacje.html">Realizacje</a>
-  <a href="cennik.html">Cennik</a>
-  <a href="o-nas.html">O nas</a>
-  <a href="faq.html">FAQ</a>
-  <a href="kontakt.html">Kontakt</a>
-</div>
-
-<a id="main" tabindex="-1"></a>
-<!-- ─── HERO ─── -->
-<section class="hero">
-  <div class="hero-orbs" aria-hidden="true">
-    <div class="hero-orb o1"></div>
-    <div class="hero-orb o2"></div>
-    <div class="hero-orb o3"></div>
-  </div>
-
-  <div class="container">
-    <h1 class="t-display hero-title reveal reveal-delay-1">
-      Strona, która<br/>
-      <span class="word-em">odpowiada</span> za&nbsp;Ciebie.
-    </h1>
-
-    <p class="t-lead hero-lead reveal reveal-delay-2">
-      Projektujemy minimalistyczne witryny i wdrażamy AI asystentów,
-      którzy mówią tonem Twojej firmy i prowadzą rozmowę do konkretu — przedstawiają ofertę, wyjaśniają cennik i kierują klienta do kontaktu.
-    </p>
-
-    <div class="hero-actions reveal reveal-delay-3">
-      <a href="kontakt.html" class="btn btn-primary magnetic">
+      <a href="kontakt.html" class="btn btn--primary nav__cta">
         Bezpłatna wycena
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
       </a>
-      <a href="#asystent" class="btn btn-ghost">Zobacz, jak rozmawia</a>
-    </div>
 
-    <div class="scroll-cue reveal reveal-delay-4">
-      <span class="line"></span>
-      <span>scroll</span>
+      <button class="nav__burger" type="button" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Menu">
+        <span aria-hidden="true"></span>
+      </button>
     </div>
   </div>
-</section>
 
-<!-- ─── PRINCIPLES ─── -->
-<section class="block" id="zasady">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-eyebrow t-small">Zasady</p>
-      <h2 class="t-h1">Cztery rzeczy, na których<br/>zbudowaliśmy <em>Kontaktio</em>.</h2>
-    </div>
-
-    <div class="principles">
-      <div class="principle reveal">
-        <span class="principle-num">01</span>
-        <h3>Mówi Twoim tonem.</h3>
-        <p>Konfigurujemy asystenta ręcznie. Brzmi jak Ty — nie jak czat z banku.</p>
-      </div>
-      <div class="principle reveal reveal-delay-1">
-        <span class="principle-num">02</span>
-        <h3>Nie zmyśla.</h3>
-        <p>Trzyma się Twoich danych. Gdy czegoś nie wie — proponuje kontakt z człowiekiem.</p>
-      </div>
-      <div class="principle reveal reveal-delay-2">
-        <span class="principle-num">03</span>
-        <h3>Jedna kwota, bez gwiazdek.</h3>
-        <p>Płacisz miesięcznie, wszystko w środku. Bez opłaty wstępnej i nagłych dodatków.</p>
-      </div>
-      <div class="principle reveal reveal-delay-3">
-        <span class="principle-num">04</span>
-        <h3>Bezpośredni kontakt.</h3>
-        <p>Kontaktujesz się bezpośrednio z zespołem realizującym projekt. Bez ticketów, kolejek i pośredników.</p>
-      </div>
-    </div>
+  <div id="mobile-drawer" class="nav__drawer" role="dialog" aria-label="Menu mobilne">
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="index.html#uslugi">Usługi</a></li>
+      <li><a href="index.html#proces">Proces</a></li>
+      <li><a href="realizacje.html">Realizacje</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <a href="kontakt.html" class="btn btn--primary btn--lg">
+      Bezpłatna wycena
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+    </a>
   </div>
-</section>
+</header>
 
-<!-- ─── MARQUEE ─── -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Strony</span>
-    <span>AI asystenci</span>
-    <span>Brand</span>
-    <span>UX</span>
-    <span>Automatyzacja</span>
-    <span>Strony</span>
-    <span>AI asystenci</span>
-    <span>Brand</span>
-    <span>UX</span>
-    <span>Automatyzacja</span>
-  </div>
-</div>
+<main id="main">
 
-<!-- ─── ASYSTENT SHOWCASE ─── -->
-<section class="block" id="asystent">
-  <div class="container">
-    <div class="showcase">
-      <div class="reveal">
-        <p class="section-eyebrow t-small">AI asystent</p>
-        <h2 class="t-h1">Pierwszy kontakt<br/>z Twoją firmą — <em>o&nbsp;każdej porze.</em></h2>
-        <p class="t-body" style="margin-top:22px; max-width:46ch;">
-          Asystent odpowiada na pytania klientów wtedy, kiedy oni je zadają.
-          Tłumaczy ofertę, podaje cenę i zakres usług, a po zebraniu podstawowych informacji
-          przekazuje rozmowę do Ciebie — bez umawiania spotkań ani rezerwacji.
+  <!-- ── HERO ─────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <p class="eyebrow reveal">Studio stron internetowych · Łódzkie · cała Polska</p>
+        <h1 class="hero__title reveal reveal--d1">
+          Tworzymy nowoczesne, szybkie i skuteczne strony internetowe&nbsp;<em>dla firm.</em>
+        </h1>
+        <p class="hero__sub reveal reveal--d2">
+          Projektujemy premium witryny, które budują zaufanie i&nbsp;zwiększają sprzedaż —
+          od strategii i designu, przez kod, po SEO techniczne i&nbsp;long‑term support.
         </p>
+        <div class="hero__actions reveal reveal--d3">
+          <a href="realizacje.html" class="btn btn--primary btn--lg">
+            Zobacz realizacje
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="kontakt.html" class="btn btn--ghost btn--lg">Skontaktuj się</a>
+        </div>
 
-        <ul class="showcase-list">
-          <li>
-            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg></span>
-            Tłumaczy ofertę i odpowiada na pytania o cennik
-          </li>
-          <li>
-            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg></span>
-            Rozumie kontekst rozmowy, nie tylko pojedyncze pytanie
-          </li>
-          <li>
-            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg></span>
-            Dostępny <em>całodobowo</em> — także poza godzinami pracy
-          </li>
-          <li>
-            <span class="check"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg></span>
-            Mniej powtarzalnej pracy dla zespołu — Ty dostajesz gotowy lead
-          </li>
-        </ul>
+        <div class="hero__meta reveal reveal--d4">
+          <div><p>Projekty zrealizowane</p><strong>40+</strong></div>
+          <div><p>Średni Lighthouse</p><strong>98 / 100</strong></div>
+          <div><p>Czas wdrożenia</p><strong>14–28 dni</strong></div>
+          <div><p>Klienci wracają</p><strong>9 / 10</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <a href="cennik.html" class="btn btn-primary magnetic">
-          Zobacz plany
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+  <!-- ── Marquee strip ─────────────────────────────────────────────────── -->
+  <div class="strip" aria-hidden="true">
+    <div class="strip__track">
+      <span>Strony korporacyjne</span><span>Sklepy internetowe</span><span>Landing page</span>
+      <span>Redesign</span><span>SEO techniczne</span><span>Wdrożenia headless</span>
+      <span>Asystenci AI</span><span>Long‑term support</span>
+      <span>Strony korporacyjne</span><span>Sklepy internetowe</span><span>Landing page</span>
+      <span>Redesign</span><span>SEO techniczne</span><span>Wdrożenia headless</span>
+      <span>Asystenci AI</span><span>Long‑term support</span>
+    </div>
+  </div>
+
+  <!-- ── O nas ────────────────────────────────────────────────────────── -->
+  <section class="section" id="o-nas">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <div>
+          <p class="eyebrow reveal">Studio</p>
+          <h2 class="reveal reveal--d1">
+            Małe, doświadczone studio. Każdy projekt prowadzi człowiek,
+            który zna Twój biznes po imieniu.
+          </h2>
+        </div>
+        <div class="reveal reveal--d2">
+          <p class="lead">
+            Nie produkujemy szablonów. Każda strona, którą wypuszczamy, jest pisana od zera
+            pod konkretny cel — sprzedaż, leady, prestiż. Działamy szybko, ale nigdy
+            kosztem detalu.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero__meta" style="margin-top:0; padding-top:0; border-top:0;">
+        <div class="reveal"><p>Projektowanie</p><strong>Figma · UX · UI</strong></div>
+        <div class="reveal reveal--d1"><p>Kod</p><strong>Czysty HTML/CSS/JS</strong></div>
+        <div class="reveal reveal--d2"><p>Wydajność</p><strong>Core Web Vitals</strong></div>
+        <div class="reveal reveal--d3"><p>Wsparcie</p><strong>Bezpośredni kontakt</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Usługi ───────────────────────────────────────────────────────── -->
+  <section class="section section--soft" id="uslugi">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Co robimy</p>
+        <h2 class="reveal reveal--d1">Strony, które wyglądają drogo i&nbsp;działają jak zegarek.</h2>
+        <p class="lead reveal reveal--d2">
+          Sześć obszarów, jeden zespół. Bez pośredników, bez podwykonawców niewiadomego pochodzenia.
+        </p>
+      </div>
+
+      <div class="services">
+        <article class="service reveal">
+          <p class="service__num">01</p>
+          <span class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M7 14h6"/></svg>
+          </span>
+          <h3 class="service__title">Projektowanie stron</h3>
+          <p class="service__desc">Strony firmowe i landing page projektowane od zera. UX, który prowadzi klienta dokładnie tam, gdzie chcesz.</p>
+          <ul class="service__list">
+            <li>Strategia i architektura informacji</li>
+            <li>Design w Figmie z systemem komponentów</li>
+            <li>Copy, mikrocopy, prototyp</li>
+          </ul>
+        </article>
+
+        <article class="service reveal reveal--d1">
+          <p class="service__num">02</p>
+          <span class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l-2 6 2 6M20 6l2 6-2 6M14 4l-4 16"/></svg>
+          </span>
+          <h3 class="service__title">Strony premium</h3>
+          <p class="service__desc">Witryny dla marek, dla których estetyka nie jest opcją. Typografia, animacje i detale klasy światowej.</p>
+          <ul class="service__list">
+            <li>Custom front‑end, zero szablonów</li>
+            <li>Animacje on‑scroll i mikrointerakcje</li>
+            <li>Pixel‑perfect na każdym ekranie</li>
+          </ul>
+        </article>
+
+        <article class="service reveal reveal--d2">
+          <p class="service__num">03</p>
+          <span class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18l-1.5 11a2 2 0 0 1-2 1.8H6.5A2 2 0 0 1 4.5 18L3 7Z"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>
+          </span>
+          <h3 class="service__title">Sklepy internetowe</h3>
+          <p class="service__desc">Sklepy, które realnie sprzedają — szybkie, czytelne, z procesem zakupowym ograniczonym do minimum.</p>
+          <ul class="service__list">
+            <li>Shopify, WooCommerce, headless</li>
+            <li>Integracje płatności i fulfilment</li>
+            <li>Optymalizacja konwersji (CRO)</li>
+          </ul>
+        </article>
+
+        <article class="service reveal">
+          <p class="service__num">04</p>
+          <span class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16"/><path d="M14 4h6v6"/><path d="M10 20H4v-6"/></svg>
+          </span>
+          <h3 class="service__title">Redesign</h3>
+          <p class="service__desc">Nowe życie dla starej witryny — bez utraty pozycji w Google i&nbsp;z poprawą każdego ważnego wskaźnika.</p>
+          <ul class="service__list">
+            <li>Audyt UX, SEO i wydajności</li>
+            <li>Migracja treści i przekierowania 301</li>
+            <li>Iteracyjne wdrożenie bez przestojów</li>
+          </ul>
+        </article>
+
+        <article class="service reveal reveal--d1">
+          <p class="service__num">05</p>
+          <span class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+          </span>
+          <h3 class="service__title">SEO techniczne</h3>
+          <p class="service__desc">Robimy SEO tak, żeby Google nie miał wymówek — szybkość, struktura, dane uporządkowane, czysty kod.</p>
+          <ul class="service__list">
+            <li>Core Web Vitals i wydajność</li>
+            <li>Schema.org, sitemap, indeksacja</li>
+            <li>Migracje bez utraty pozycji</li>
+          </ul>
+        </article>
+
+        <article class="service reveal reveal--d2">
+          <p class="service__num">06</p>
+          <span class="service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </span>
+          <h3 class="service__title">Utrzymanie i support</h3>
+          <p class="service__desc">Hosting, kopie, aktualizacje, drobne zmiany. Twoja strona nie wymaga od Ciebie myślenia o&nbsp;niej.</p>
+          <ul class="service__list">
+            <li>Monitoring 24/7 i SLA</li>
+            <li>Drobne zmiany w&nbsp;ramach abonamentu</li>
+            <li>Bezpieczeństwo i&nbsp;backup</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="reveal" style="margin-top:48px; color:var(--muted); font-size:.96rem; max-width:60ch;">
+        <strong style="color:var(--ink); font-weight:600;">Dodatkowo:</strong>
+        wdrażamy także asystentów AI z&nbsp;tonem Twojej firmy — jako uzupełnienie strony, nie jej zastępstwo.
+        To mały dodatek do tego, co robimy najlepiej: pięknych, szybkich witryn pisanych od zera.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Proces ───────────────────────────────────────────────────────── -->
+  <section class="section" id="proces">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Jak pracujemy</p>
+        <h2 class="reveal reveal--d1">Pięć kroków od&nbsp;rozmowy do&nbsp;publikacji.</h2>
+        <p class="lead reveal reveal--d2">
+          Bez chaosu, bez „zaskoczeń pod koniec projektu”. Każdy etap kończy się
+          decyzją, którą podejmujemy razem.
+        </p>
+      </div>
+
+      <ol class="process" role="list">
+        <li class="step reveal"><span class="step__num"></span><h3 class="step__title">Rozmowa</h3><p class="step__desc">30 minut, bez zobowiązań. Słuchamy o Twoim biznesie, celach i&nbsp;klientach.</p></li>
+        <li class="step reveal reveal--d1"><span class="step__num"></span><h3 class="step__title">Strategia &amp; copy</h3><p class="step__desc">Definiujemy strukturę, ton, treści i&nbsp;konkretne cele biznesowe strony.</p></li>
+        <li class="step reveal reveal--d2"><span class="step__num"></span><h3 class="step__title">Design</h3><p class="step__desc">Projekt w&nbsp;Figmie. Iteracje aż do&nbsp;„tak — to jest ono”.</p></li>
+        <li class="step reveal reveal--d3"><span class="step__num"></span><h3 class="step__title">Kod</h3><p class="step__desc">Czysty HTML/CSS/JS lub stack pod konkretne potrzeby. Wydajność i&nbsp;dostępność jako standard.</p></li>
+        <li class="step reveal reveal--d4"><span class="step__num"></span><h3 class="step__title">Launch &amp; opieka</h3><p class="step__desc">Publikujemy, mierzymy, dopinamy. Zostajemy z&nbsp;Tobą w&nbsp;ramach supportu.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ── Realizacje (skrót) ──────────────────────────────────────────── -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head section-head--split">
+        <div>
+          <p class="eyebrow reveal">Realizacje</p>
+          <h2 class="reveal reveal--d1">Wybrane projekty z&nbsp;ostatnich miesięcy.</h2>
+        </div>
+        <p class="reveal reveal--d2 muted" style="font-size:1.05rem;">
+          Każdy projekt to inny biznes, inny styl i&nbsp;inna grupa odbiorców —
+          ale wspólny mianownik to dopracowanie i&nbsp;szybkość działania.
+        </p>
+      </div>
+
+      <div class="work">
+        <a href="realizacje.html#nordwood" class="work__card reveal">
+          <div class="work__media">
+            <svg class="work__art" viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="600" height="450" fill="#efeae2"/>
+              <text x="40" y="120" font-family="Inter, sans-serif" font-size="64" font-weight="800" fill="#1a1a1a" letter-spacing="-2">NORDWOOD</text>
+              <text x="40" y="170" font-family="Inter, sans-serif" font-size="20" fill="#6b6b6b">studio architektury</text>
+              <rect x="40" y="240" width="200" height="160" fill="#1a1a1a"/>
+              <rect x="260" y="240" width="120" height="160" fill="#d6cdbf"/>
+              <rect x="400" y="240" width="160" height="160" fill="#a59886"/>
+            </svg>
+          </div>
+          <div class="work__body">
+            <div class="work__meta"><span>Strona firmowa</span><span>2025</span></div>
+            <h3 class="work__title">Nordwood Studio</h3>
+            <p class="work__desc">Minimalistyczna witryna pracowni architektonicznej z&nbsp;galerią projektów.</p>
+            <div class="work__tags"><span class="work__tag">Design</span><span class="work__tag">Front‑end</span><span class="work__tag">SEO</span></div>
+          </div>
+        </a>
+
+        <a href="realizacje.html#atelier" class="work__card reveal reveal--d1">
+          <div class="work__media">
+            <svg class="work__art work__art--dark" viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="600" height="450" fill="#0f0f0f"/>
+              <text x="40" y="130" font-family="Inter, sans-serif" font-size="56" font-weight="800" fill="#fff" letter-spacing="-2">ATELIER 21</text>
+              <text x="40" y="170" font-family="Inter, sans-serif" font-size="20" fill="#9a9a9a">galeria · sklep online</text>
+              <circle cx="160" cy="320" r="80" fill="#fff"/>
+              <circle cx="320" cy="320" r="80" fill="#2a2a2a" stroke="#fff" stroke-width="2"/>
+              <circle cx="480" cy="320" r="80" fill="#fff"/>
+            </svg>
+          </div>
+          <div class="work__body">
+            <div class="work__meta"><span>Sklep online</span><span>2025</span></div>
+            <h3 class="work__title">Atelier 21</h3>
+            <p class="work__desc">Sklep z&nbsp;designerską biżuterią — wysoka konwersja w&nbsp;pierwszym miesiącu.</p>
+            <div class="work__tags"><span class="work__tag">E‑commerce</span><span class="work__tag">UX</span><span class="work__tag">CRO</span></div>
+          </div>
+        </a>
+
+        <a href="realizacje.html#kanto" class="work__card reveal reveal--d2">
+          <div class="work__media">
+            <svg class="work__art" viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="600" height="450" fill="#f5f5f5"/>
+              <text x="40" y="120" font-family="Inter, sans-serif" font-size="64" font-weight="800" fill="#1a1a1a" letter-spacing="-2">KANTO</text>
+              <text x="40" y="170" font-family="Inter, sans-serif" font-size="20" fill="#6b6b6b">kancelaria prawna</text>
+              <line x1="40"  y1="280" x2="560" y2="280" stroke="#1a1a1a" stroke-width="1"/>
+              <line x1="40"  y1="320" x2="420" y2="320" stroke="#1a1a1a" stroke-width="1"/>
+              <line x1="40"  y1="360" x2="500" y2="360" stroke="#1a1a1a" stroke-width="1"/>
+              <line x1="40"  y1="400" x2="320" y2="400" stroke="#1a1a1a" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="work__body">
+            <div class="work__meta"><span>Strona firmowa</span><span>2024</span></div>
+            <h3 class="work__title">Kanto Legal</h3>
+            <p class="work__desc">Strona kancelarii — typografia, powaga, czytelność. Bez ozdobników.</p>
+            <div class="work__tags"><span class="work__tag">Brand</span><span class="work__tag">Web</span><span class="work__tag">Copy</span></div>
+          </div>
         </a>
       </div>
 
-      <div class="phone reveal reveal-delay-2" aria-hidden="true">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-bar">
-            <div class="phone-avatar"></div>
-            <div>
-              <div class="phone-bar-name">Asystent · Kontaktio</div>
-              <div class="phone-bar-sub">online</div>
-            </div>
-          </div>
-          <div class="phone-chat">
-            <div class="bubble user b1">Ile kosztuje wdrożenie asystenta na moją stronę?</div>
-            <div class="bubble bot b2">Najmniejszy plan to 499 zł / mies. — w środku konfiguracja pod Twoją firmę i do 500 rozmów. Mogę przesłać szczegóły mailem?</div>
-            <div class="bubble user b3">Tak, poproszę. I jeszcze pytanie o stronę.</div>
-            <div class="bubble bot b4">
-              <span class="typing"><i></i><i></i><i></i></span>
-            </div>
-          </div>
-          <div class="phone-input">
-            <span>Napisz wiadomość…</span>
-            <span class="send"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── CAPABILITIES ─── -->
-<section class="block" id="capabilities">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-eyebrow t-small">Co potrafi</p>
-      <h2 class="t-h1">Konkretne zadania,<br/>od pierwszego dnia.</h2>
-    </div>
-
-    <div class="cap-grid">
-      <article class="cap reveal">
-        <div class="cap-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h18M3 12h18M3 16h12"/></svg>
-        </div>
-        <h3>Odpowiada na pytania o ofertę</h3>
-        <p>Cennik, dostępność, zakres usług — z Twoich danych, w Twoim stylu.</p>
-      </article>
-
-      <article class="cap reveal reveal-delay-1">
-        <div class="cap-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7H15a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <h3>Wyjaśnia cennik</h3>
-        <p>Tłumaczy plany, zakres usług i koszty — w Twoim stylu, z Twoich danych.</p>
-      </article>
-
-      <article class="cap reveal reveal-delay-2">
-        <div class="cap-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.4 8.4 0 0 1-7.6-4.6L3 21l1.7-1.4A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></svg>
-        </div>
-        <h3>Kwalifikuje zapytania</h3>
-        <p>Oddziela ciekawskich od realnych klientów. Do skrzynki trafia gotowy lead.</p>
-      </article>
-
-      <article class="cap reveal">
-        <div class="cap-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 2a14 14 0 0 1 0 20M12 2a14 14 0 0 0 0 20"/></svg>
-        </div>
-        <h3>Mówi w językach klientów</h3>
-        <p>Rozumie polski, angielski, niemiecki, ukraiński — w tym samym oknie czatu.</p>
-      </article>
-
-      <article class="cap reveal reveal-delay-1">
-        <div class="cap-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="14" r="4"/><path d="M12 2v6M12 22v-2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19"/></svg>
-        </div>
-        <h3>Doradza przy wyborze</h3>
-        <p>Pomaga porównać warianty, dopytuje o potrzeby, podsuwa najlepsze dopasowanie.</p>
-      </article>
-
-      <article class="cap reveal reveal-delay-2">
-        <div class="cap-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h4"/></svg>
-        </div>
-        <h3>Zostawia raport</h3>
-        <p>Streszczenie rozmów, najczęstsze pytania i lista kontaktów do oddzwonienia.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ─── PROCESS ─── -->
-<section class="block" id="proces">
-  <div class="container">
-    <div class="section-header center reveal">
-      <p class="section-eyebrow t-small" style="justify-content:center;">Jak pracujemy</p>
-      <h2 class="t-h1">Trzy kroki.<br/>Jeden bezpośredni kontakt.</h2>
-    </div>
-
-    <div class="process">
-      <div class="process-step reveal">
-        <div class="process-num">i</div>
-        <h3>Rozmowa</h3>
-        <p>Krótkie spotkanie, bez prezentacji na 40 slajdów. Pytamy o firmę, klientów i o to, co najczęściej Cię od nich pyta.</p>
-      </div>
-      <div class="process-step reveal reveal-delay-1">
-        <div class="process-num">ii</div>
-        <h3>Wycena i akceptacja</h3>
-        <p>Konkretna propozycja w ciągu doby. Co dostajesz, ile to kosztuje, w jakim zakresie.</p>
-      </div>
-      <div class="process-step reveal reveal-delay-2">
-        <div class="process-num">iii</div>
-        <h3>Wdrożenie i&nbsp;start</h3>
-        <p>Strona i asystent dopinane razem z Tobą. Konfiguracja pod Twoją firmę i ton rozmowy.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── PRICING ─── -->
-<section class="block" id="cennik">
-  <div class="container">
-    <div class="section-header center reveal">
-      <p class="section-eyebrow t-small" style="justify-content:center;">Cennik</p>
-      <h2 class="t-h1">Bez gwiazdek. Bez „od".</h2>
-      <p class="t-body" style="margin-top:18px;">Trzy plany, jedna logika: płacisz miesięcznie, w każdej chwili możesz zmienić plan lub zrezygnować.</p>
-    </div>
-
-    <div class="pricing-grid">
-      <div class="price-card reveal">
-        <p class="t-small">Starter</p>
-        <h3>AI asystent na Twojej stronie</h3>
-        <div class="price-row">
-          <span class="price-amount">499</span>
-          <span class="price-period">zł / mies.</span>
-        </div>
-        <ul class="price-features">
-          <li><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>Asystent wpięty w Twoją stronę</li>
-          <li><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>Konfiguracja pod firmę i ton</li>
-          <li><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>Do 500 rozmów miesięcznie</li>
-          <li><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>Wsparcie e-mail</li>
-        </ul>
-        <a href="mailto:kontakt@kontaktio.pl?subject=Plan%20Starter" class="btn btn-ghost btn-full">Wybieram Starter</a>
-      </div>
-
-      <div class="price-card featured reveal reveal-delay-1">
-        <span class="price-badge">Polecane</span>
-        <p class="t-small">Growth</p>
-        <h3>Strona + AI asystent</h3>
-        <div class="price-row">
-          <span class="price-amount">999</span>
-          <span class="price-period">zł / mies.</span>
-        </div>
-        <ul class="price-features">
-          <li><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>Wszystko z planu Starter</li>
-          <li><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>Pełna, nowa strona internetowa</li>
-          <li><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>Do 2000 rozmów miesięcznie + raporty</li>
-          <li><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>Priorytetowe wsparcie</li>
-        </ul>
-        <a href="mailto:kontakt@kontaktio.pl?subject=Plan%20Growth" class="btn btn-light btn-full">Wybieram Growth</a>
-      </div>
-
-      <div class="price-card reveal reveal-delay-2">
-        <p class="t-small">Custom</p>
-        <h3>Dla większej skali</h3>
-        <div class="price-row">
-          <span class="price-amount">Wycena</span>
-          <span class="price-period">indywidualna</span>
-        </div>
-        <ul class="price-features">
-          <li><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>Wszystko z planu Growth</li>
-          <li><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>Dedykowane integracje</li>
-          <li><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>Własna baza wiedzy</li>
-          <li><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2 6 5 9 10 3"/></svg>SLA i bez limitu rozmów</li>
-        </ul>
-        <a href="mailto:kontakt@kontaktio.pl?subject=Plan%20Custom" class="btn btn-ghost btn-full">Porozmawiajmy</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── TESTIMONIAL ─── -->
-<section class="block compact" id="opinia">
-  <div class="container">
-    <div class="quote reveal">
-      <blockquote>
-        Telefon dzwoni dziś rzadziej, ale w skrzynce mam konkretne zapytania — z imieniem, godziną i tym, czego ktoś szuka.
-      </blockquote>
-      <div class="quote-meta">
-        <strong>Anna K.</strong>
-        <span class="dot"></span>
-        <span>klientka Kontaktio</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── FAQ ─── -->
-<section class="block" id="faq">
-  <div class="container">
-    <div class="section-header center reveal">
-      <p class="section-eyebrow t-small" style="justify-content:center;">FAQ</p>
-      <h2 class="t-h1">Najczęstsze pytania.</h2>
-    </div>
-
-    <div class="faq reveal">
-      <div class="faq-item open">
-        <button class="faq-q" type="button">
-          Czy asystent „wymyśla" odpowiedzi?
-          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
-        </button>
-        <div class="faq-a"><p>Nie. Asystent opiera się o konfigurację i Twoje dane. Jeśli czegoś nie ma w bazie wiedzy — informuje o tym i proponuje kontakt z Tobą lub Twoim zespołem.</p></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button">
-          Czy mogę zmienić plan albo zrezygnować?
-          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
-        </button>
-        <div class="faq-a"><p>Tak. Minimalny okres współpracy to 3 miesiące. Po nim możesz zmienić plan w dowolnym momencie albo zrezygnować z miesięcznym wypowiedzeniem.</p></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button">
-          Czy asystent będzie pasował do mojej strony?
-          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
-        </button>
-        <div class="faq-a"><p>Tak. Kolory, typografia i ton asystenta są dopasowywane do Twojej marki. Wpinamy go w Twoją obecną stronę albo budujemy nową — w zależności od planu.</p></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button">
-          Z kim się kontaktuję?
-          <span class="faq-icon"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v8M2 6h8"/></svg></span>
-        </button>
-        <div class="faq-a"><p>Bezpośrednio z zespołem realizującym projekt. Bez account managerów, ticketów i kolejek — odpowiada osoba, która zna Twoją sprawę.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── CTA ─── -->
-<section class="block" id="cta-section">
-  <div class="container">
-    <div class="cta reveal">
-      <p class="t-small">Gotowy?</p>
-      <h2>Niech Twoja strona<br/>zacznie pracować.</h2>
-      <p>Bezpłatna wycena, niezobowiązująca rozmowa, konkretne pytania.</p>
-      <div class="cta-actions">
-        <a href="mailto:kontakt@kontaktio.pl?subject=Bezp%C5%82atna%20wycena" class="btn btn-light magnetic">
-          Bezpłatna wycena
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      <div class="reveal" style="margin-top:48px;">
+        <a href="realizacje.html" class="btn btn--ghost">
+          Zobacz wszystkie realizacje
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
-        <a href="kontakt.html" class="btn btn-ghost" style="border-color:rgba(255,255,255,.25); color:#fff;">Strona kontaktu</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ─── FOOTER ─── -->
-<footer>
+  <!-- ── Opinie ───────────────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Opinie klientów</p>
+        <h2 class="reveal reveal--d1">Współpraca, do&nbsp;której się wraca.</h2>
+      </div>
+
+      <div class="quotes">
+        <figure class="quote reveal">
+          <blockquote class="quote__text">„Dostaliśmy stronę, której nie wstyd pokazać największym klientom. Wszystko zrobione na czas, bez kombinowania, z dbałością o każdy detal.”</blockquote>
+          <figcaption class="quote__person">
+            <span class="quote__avatar" aria-hidden="true">MK</span>
+            <span><span class="quote__name">Marta Kwiatkowska</span><br><span class="quote__role">Dyrektor marketingu, Nordwood</span></span>
+          </figcaption>
+        </figure>
+
+        <figure class="quote reveal reveal--d1">
+          <blockquote class="quote__text">„Po redesignie strony konwersja na zapytania wzrosła o 38%. Konkretnie, mierzalnie, bez magii — po prostu dobry projekt i&nbsp;szybki kod.”</blockquote>
+          <figcaption class="quote__person">
+            <span class="quote__avatar" aria-hidden="true">PJ</span>
+            <span><span class="quote__name">Piotr Jaworski</span><br><span class="quote__role">Founder, Atelier 21</span></span>
+          </figcaption>
+        </figure>
+
+        <figure class="quote reveal reveal--d2">
+          <blockquote class="quote__text">„Najlepsza inwestycja roku. Strona ładuje się błyskawicznie, wygląda lepiej niż u największych konkurentów, a&nbsp;zespół Kontaktio odpowiada w 15 minut.”</blockquote>
+          <figcaption class="quote__person">
+            <span class="quote__avatar" aria-hidden="true">AS</span>
+            <span><span class="quote__name">Anna Sokołowska</span><br><span class="quote__role">Wspólnik zarządzający, Kanto Legal</span></span>
+          </figcaption>
+        </figure>
+
+        <figure class="quote reveal reveal--d3">
+          <blockquote class="quote__text">„Prowadzą Cię przez proces tak, że nie musisz znać się na technologii. Tłumaczą po ludzku i&nbsp;dowożą to, co obiecali.”</blockquote>
+          <figcaption class="quote__person">
+            <span class="quote__avatar" aria-hidden="true">TR</span>
+            <span><span class="quote__name">Tomasz Radecki</span><br><span class="quote__role">CEO, Helix Manufacturing</span></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ─────────────────────────────────────────────────────────── -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="cta reveal">
+        <div>
+          <p class="eyebrow" style="color:rgba(255,255,255,0.6);">Zacznij projekt</p>
+          <h2 style="margin-top:16px;">Twoja strona zasługuje na&nbsp;coś więcej niż&nbsp;szablon.</h2>
+          <p>Zostaw nam adres — w&nbsp;ciągu 24&nbsp;godzin odezwiemy się z&nbsp;pierwszą rozmową i&nbsp;wstępną wyceną. Bez zobowiązań.</p>
+        </div>
+        <div class="cta__actions">
+          <a href="kontakt.html" class="btn btn--light btn--lg">
+            Bezpłatna wycena
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="mailto:kontakt@kontaktio.pl" class="btn btn--ghost btn--lg" style="color:#fff; border-color:rgba(255,255,255,0.3);">Napisz e‑mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────────── -->
+<footer class="footer" role="contentinfo">
   <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5.2 2.6 4 15.4"/><path d="M12.6 4.1 6 9.4"/><path d="M6.7 9 11.4 15.4"/><circle cx="13.4" cy="3.6" r="1.35" fill="currentColor" stroke="none"/></svg></span>
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo" aria-label="Kontaktio — strona główna">
+          <span class="nav__logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5.2 2.6 4 15.4"/><path d="M12.6 4.1 6 9.4"/><path d="M6.7 9 11.4 15.4"/><circle cx="13.4" cy="3.6" r="1.35" fill="currentColor" stroke="none"/></svg>
+          </span>
           <span>Kontaktio</span>
         </a>
-        <p>Strony internetowe i AI asystenci dla firm. Spokojnie, konkretnie, bez ukrytych kosztów.</p>
+        <p>Studio premium stron internetowych. Projekt, kod, SEO i&nbsp;long‑term support pod jednym dachem.</p>
       </div>
 
-      <div class="footer-col">
-        <h4>Strony</h4>
+      <div>
+        <h4>Strona</h4>
         <ul>
           <li><a href="index.html">Start</a></li>
+          <li><a href="index.html#uslugi">Usługi</a></li>
+          <li><a href="index.html#proces">Proces</a></li>
           <li><a href="realizacje.html">Realizacje</a></li>
-          <li><a href="cennik.html">Cennik</a></li>
-          <li><a href="o-nas.html">O nas</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Wiedza</h4>
-        <ul>
-          <li><a href="faq.html">FAQ</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
-          <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
-          <li><a href="regulamin.html">Regulamin</a></li>
         </ul>
       </div>
 
-      <div class="footer-col">
-        <h4>Kontakt</h4>
+      <div>
+        <h4>Firma</h4>
         <ul>
+          <li>Kontaktio Bartosz&nbsp;Fiks</li>
+          <li>NIP: 7282909882</li>
+          <li>Łódzkie · cała Polska</li>
           <li><a href="mailto:kontakt@kontaktio.pl">kontakt@kontaktio.pl</a></li>
-          <li><span>Łódzkie · cała Polska</span></li>
-          <li><span>NIP: 7282909882</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+          <li><a href="regulamin.html">Regulamin serwisu</a></li>
+          <li><a href="polityka-cookies.html">Polityka cookies</a></li>
+          <li><a href="#" data-cookie-open>Ustawienia cookies</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="footer-bottom">
-      <span>© Kontaktio Bartosz Fiks</span>
-      <a href="mailto:kontakt@kontaktio.pl" class="social" aria-label="E-mail">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
-      </a>
+    <div class="footer__bottom">
+      <span>© <span id="y">2026</span> Kontaktio Bartosz&nbsp;Fiks. Wszystkie prawa zastrzeżone.</span>
+      <span class="footer__legal">
+        <a href="polityka-prywatnosci.html">Prywatność</a>
+        <a href="regulamin.html">Regulamin</a>
+        <a href="polityka-cookies.html">Cookies</a>
+      </span>
     </div>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- ── Cookie banner ──────────────────────────────────────────────── -->
+<aside class="cookie" data-cookie-banner role="dialog" aria-live="polite" aria-label="Informacja o plikach cookies">
+  <h4>Pliki cookies</h4>
+  <p>
+    Używamy plików cookies do zapewnienia działania serwisu oraz — za Twoją zgodą —
+    do analityki i&nbsp;marketingu. Szczegóły opisaliśmy w&nbsp;<a href="polityka-cookies.html" class="text-link">polityce cookies</a>.
+  </p>
+  <div class="cookie__actions">
+    <button type="button" class="btn btn--primary" data-cookie-accept-all>Akceptuję wszystkie</button>
+    <button type="button" class="btn btn--ghost"   data-cookie-reject>Tylko niezbędne</button>
+    <button type="button" class="btn btn--ghost"   data-cookie-customize>Ustawienia</button>
+  </div>
+</aside>
+
+<!-- ── Cookie modal ───────────────────────────────────────────────── -->
+<div class="cookie-modal" data-cookie-modal role="dialog" aria-modal="true" aria-label="Ustawienia plików cookies">
+  <div class="cookie-modal__panel">
+    <h3>Ustawienia plików cookies</h3>
+    <p class="cookie-modal__intro">Zdecyduj, na które kategorie plików cookies wyrażasz zgodę. Możesz zmienić tę decyzję w&nbsp;dowolnym momencie.</p>
+
+    <div class="cookie-row">
+      <div class="cookie-row__head">
+        <strong>Niezbędne</strong>
+        <label class="switch" aria-label="Niezbędne — zawsze włączone">
+          <input type="checkbox" checked disabled />
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+      <p>Wymagane do działania strony — np. obsługa preferencji cookies czy bezpieczeństwo. Nie wymagają zgody.</p>
+    </div>
+
+    <div class="cookie-row">
+      <div class="cookie-row__head">
+        <strong>Analityczne</strong>
+        <label class="switch" aria-label="Analityczne">
+          <input type="checkbox" data-cookie-toggle="analytics" />
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+      <p>Anonimowe statystyki ruchu — pomagają nam ulepszać stronę. Nie identyfikują Ciebie osobiście.</p>
+    </div>
+
+    <div class="cookie-row">
+      <div class="cookie-row__head">
+        <strong>Marketingowe</strong>
+        <label class="switch" aria-label="Marketingowe">
+          <input type="checkbox" data-cookie-toggle="marketing" />
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+      <p>Pomagają mierzyć skuteczność kampanii i&nbsp;dopasowywać komunikację. Aktualnie nie używamy aktywnie tej kategorii.</p>
+    </div>
+
+    <div class="cookie-modal__actions">
+      <button type="button" class="btn btn--ghost"  data-cookie-modal-close>Anuluj</button>
+      <button type="button" class="btn btn--ghost"  data-cookie-accept-all>Akceptuję wszystkie</button>
+      <button type="button" class="btn btn--primary" data-cookie-save>Zapisz wybór</button>
+    </div>
+  </div>
+</div>
+
 <script src="main.js" defer></script>
-<script src="animations.js" defer></script>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 <script
   data-kontaktio
   data-client="premium"
