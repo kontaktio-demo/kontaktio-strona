@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://chatbot-backend-x2cy.onrender.com" crossorigin />
   <link rel="dns-prefetch" href="https://www.google.com" />
 
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://chatbot-backend-x2cy.onrender.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://chatbot-backend-x2cy.onrender.com https://cdn.jsdelivr.net wss://chatbot-backend-x2cy.onrender.com; frame-src https://www.google.com https://maps.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://chatbot-backend-x2cy.onrender.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://chatbot-backend-x2cy.onrender.com https://cdn.jsdelivr.net wss://chatbot-backend-x2cy.onrender.com https://api.web3forms.com; frame-src https://www.google.com https://maps.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; upgrade-insecure-requests" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" />
@@ -128,7 +128,22 @@
           </div>
         </div>
 
-        <form class="form reveal reveal--d1" data-contact novalidate aria-label="Formularz kontaktowy">
+        <form class="form reveal reveal--d1"
+              data-contact
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              novalidate
+              aria-label="Formularz kontaktowy">
+
+          <!-- Web3Forms — wymagane pola -->
+          <input type="hidden" name="access_key" value="68c116a5-2666-49f9-842a-43a22701c16e" />
+          <input type="hidden" name="subject" value="Nowe zapytanie ze strony kontaktio.pl" />
+          <input type="hidden" name="from_name" value="Formularz — kontaktio.pl" />
+          <input type="hidden" name="redirect" value="false" />
+          <!-- Honeypot anti-spam (musi pozostać puste) -->
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"
+                 style="display:none !important;" aria-hidden="true" />
+
           <div class="field">
             <label for="f-name">Imię</label>
             <input id="f-name" name="name" type="text" autocomplete="given-name" required minlength="2" maxlength="80" />
@@ -149,7 +164,7 @@
           </div>
 
           <div class="field field--check">
-            <input id="f-consent" name="consent" type="checkbox" required />
+            <input id="f-consent" name="consent" type="checkbox" required value="Tak" />
             <label for="f-consent">
               Wyrażam zgodę na przetwarzanie moich danych w&nbsp;celu obsługi zapytania.
               Szczegóły w&nbsp;<a href="polityka-prywatnosci.html" class="text-link">polityce prywatności</a>.
@@ -158,8 +173,8 @@
           <span class="field__error" aria-live="polite"></span>
 
           <div>
-            <button type="submit" class="btn btn--primary btn--lg">
-              Wyślij wiadomość
+            <button type="submit" class="btn btn--primary btn--lg" data-submit>
+              <span data-submit-label>Wyślij wiadomość</span>
               <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
             </button>
           </div>

@@ -145,7 +145,7 @@
       });
     });
 
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       if (!validate()) {
         if (status) {
@@ -154,29 +154,60 @@
         }
         return;
       }
-      // No backend: open user's mail client with a safely-encoded message.
-      // Defence-in-depth: strip CR/LF from single-line fields to avoid any
-      // chance of header injection in non-conformant mail clients, then rely
-      // on encodeURIComponent for transport-level escaping.
-      const stripCtl   = (s) => String(s).replace(/[\r\n\t]+/g, " ").trim();
-      const cleanBody  = (s) => String(s).replace(/\r\n?/g, "\n").trim();
-      const safeName   = stripCtl(fields.name.value).slice(0, 80);
-      const safeEmail  = stripCtl(fields.email.value).slice(0, 120);
-      const safeMsg    = cleanBody(fields.message.value).slice(0, 3000);
-      const subject = `Zapytanie ze strony kontaktio.pl — ${safeName}`;
-      const body =
-        `Imię: ${safeName}\n` +
-        `E-mail: ${safeEmail}\n\n` +
-        `Wiadomość:\n${safeMsg}\n`;
-      const href =
-        "mailto:kontakt@kontaktio.pl" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body="    + encodeURIComponent(body);
-      window.location.href = href;
 
+      const submitBtn   = form.querySelector("[data-submit]");
+      const submitLabel = form.querySelector("[data-submit-label]");
+      const originalLbl = submitLabel ? submitLabel.textContent : "";
+
+      const setBusy = (busy) => {
+        if (submitBtn) {
+          submitBtn.disabled = busy;
+          submitBtn.setAttribute("aria-busy", busy ? "true" : "false");
+        }
+        if (submitLabel) submitLabel.textContent = busy ? "Wysyłam…" : originalLbl;
+      };
+
+      // Build payload (FormData includes the hidden access_key + honeypot).
+      const fd = new FormData(form);
+      // JSON gives us cleaner error messages from Web3Forms.
+      const payload = {};
+      fd.forEach((v, k) => { payload[k] = typeof v === "string" ? v : String(v); });
+
+      setBusy(true);
       if (status) {
-        status.textContent = "Otwieram klienta pocztowego — jeśli się nie otworzy, napisz na kontakt@kontaktio.pl.";
-        status.className = "form__status is-show is-ok";
+        status.textContent = "Wysyłam wiadomość…";
+        status.className = "form__status is-show";
+      }
+
+      try {
+        const res = await fetch(form.action || "https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        let data = null;
+        try { data = await res.json(); } catch { /* non-JSON */ }
+
+        if (res.ok && data && data.success) {
+          form.reset();
+          if (status) {
+            status.textContent = "Dziękujemy! Wiadomość została wysłana — odezwiemy się w ciągu 24 godzin.";
+            status.className = "form__status is-show is-ok";
+          }
+        } else {
+          const msg = (data && data.message) ? String(data.message) : "Nie udało się wysłać wiadomości.";
+          if (status) {
+            status.textContent = msg + " Możesz też napisać bezpośrednio na kontakt@kontaktio.pl.";
+            status.className = "form__status is-show is-error";
+          }
+        }
+      } catch {
+        if (status) {
+          status.textContent = "Problem z połączeniem. Spróbuj ponownie lub napisz na kontakt@kontaktio.pl.";
+          status.className = "form__status is-show is-error";
+        }
+      } finally {
+        setBusy(false);
       }
     });
   };
