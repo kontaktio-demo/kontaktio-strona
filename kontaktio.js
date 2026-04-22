@@ -8,6 +8,17 @@
   if (window.__KontaktioBooted) return;
   window.__KontaktioBooted = true;
 
+  // Derive base URL from this script's own src so we can ship the brand logo
+  // as the launcher icon for any embedder.
+  const SELF_SCRIPT = document.currentScript
+    || document.querySelector('script[src*="kontaktio.js"]');
+  let LOGO_URL = "";
+  try {
+    if (SELF_SCRIPT && SELF_SCRIPT.src) {
+      LOGO_URL = new URL("logo-white.png", SELF_SCRIPT.src).href;
+    }
+  } catch { /* ignore — falls back to emoji */ }
+
 
 
 
@@ -46,8 +57,21 @@
         cursor: pointer;
         user-select: none;
         z-index: 2147483000;
-        box-shadow: 0 10px 30px rgba(0,0,0,.25);
+        box-shadow: 0 12px 30px rgba(0,0,0,.22), 0 4px 10px rgba(0,0,0,.12);
         transform: translateZ(0);
+        transition: transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s cubic-bezier(.22,1,.36,1);
+      }
+      .kontaktio-launcher:hover {
+        transform: translateY(-2px) scale(1.04);
+        box-shadow: 0 18px 40px rgba(0,0,0,.28), 0 6px 14px rgba(0,0,0,.16);
+      }
+      .kontaktio-launcher img {
+        max-width: 60%;
+        max-height: 60%;
+        width: auto;
+        height: auto;
+        display: block;
+        pointer-events: none;
       }
 
       .kontaktio-widget {
@@ -183,21 +207,21 @@
         hours: company.hours || ""
       },
       theme: {
-        headerBg: theme.headerBg || theme.buttonBg || "#111827",
+        headerBg: theme.headerBg || theme.buttonBg || "#0a0a0a",
         headerText: theme.headerText || "#ffffff",
         widgetBg: theme.widgetBg || "#ffffff",
         inputBg: theme.inputBg || "#ffffff",
         inputText: theme.inputText || "#111827",
-        buttonBg: theme.buttonBg || "#1a1a1a",
+        buttonBg: theme.buttonBg || "#0a0a0a",
         buttonText: theme.buttonText || "#ffffff",
         botBubbleBg: theme.botBubbleBg || "#f3f4f6",
         botBubbleText: theme.botBubbleText || "#111827",
-        userBubbleBg: theme.userBubbleBg || theme.buttonBg || "#1a1a1a",
+        userBubbleBg: theme.userBubbleBg || theme.buttonBg || "#0a0a0a",
         userBubbleText: theme.userBubbleText || "#ffffff",
         radius: Number(theme.radius ?? 18),
         position: theme.position === "left" ? "left" : "right"
       },
-      launcher_icon: cfg.launcher_icon || "💬",
+      launcher_icon: cfg.launcher_icon || (LOGO_URL ? { type: "img", src: LOGO_URL, alt: "Kontaktio" } : "💬"),
       welcome_message: cfg.welcome_message || "",
       welcome_hint: cfg.welcome_hint || "",
       quick_replies: Array.isArray(cfg.quick_replies) ? cfg.quick_replies : [],
@@ -495,8 +519,17 @@
       const { pos, offsetX, offsetY } = getPos();
 
 
-      const launcher = el("div", { id: launcherId, class: "kontaktio-launcher" }, [
-        el("div", {}, [cfg.launcher_icon || "💬"])
+      // Build launcher icon: support string emoji/text or { type:"img", src, alt }
+      const buildLauncherIcon = () => {
+        const ic = cfg.launcher_icon;
+        if (ic && typeof ic === "object" && ic.type === "img" && ic.src) {
+          return el("img", { src: ic.src, alt: "", "aria-hidden": "true" });
+        }
+        return document.createTextNode(typeof ic === "string" && ic ? ic : "💬");
+      };
+
+      const launcher = el("div", { id: launcherId, class: "kontaktio-launcher", role: "button", "aria-label": "Otwórz czat", tabindex: "0" }, [
+        el("div", { style: "width:100%;height:100%;display:flex;align-items:center;justify-content:center;" }, [buildLauncherIcon()])
       ]);
 
       launcher.style.width = "56px";
@@ -508,6 +541,9 @@
       launcher.style[pos] = `${offsetX}px`;
 
       launcher.addEventListener("click", toggleWidget);
+      launcher.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleWidget(); }
+      });
 
 
       const widget = el("div", { id: widgetId, class: "kontaktio-widget" }, []);
