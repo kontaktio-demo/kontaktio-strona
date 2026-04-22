@@ -1,11 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /1.html
-Disallow: /1.css
-Disallow: /1.js
-Disallow: /DEMO-
-
-# Be polite with aggressive crawlers but allow indexing
-Crawl-delay: 1
+Disallow: /kontaktio.js
 
 Sitemap: https://kontaktio.pl/sitemap.xml
